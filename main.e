@@ -15,10 +15,8 @@ create
 feature {NONE} -- Initialization
 
 	make
-			-- Run application.
 		do
-			--| Add your code here
-			print ("Hello Eiffel World!%N")
+			print ("Triple Triad!%N")
 		end
 
 end
