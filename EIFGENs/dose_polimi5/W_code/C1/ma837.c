@@ -60,7 +60,7 @@ void F837_6523 (EIF_REFERENCE Current)
 	RTDBGEAA(836, Current, 11753);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	tr1 = RTMS_EX_H("Hello Eiffel World!\012",20,1206243338);
+	tr1 = RTMS_EX_H("Triple Triad!\012",14,1318523658);
 	ur1 = tr1;
 	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(836, 8, Dtype(Current)))(Current, ur1x);
 	RTVI(Current, RTAL);

@@ -53,7 +53,7 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 .cpp.o:
 	$(CPP) $(CPPFLAGS) -c $<
 
-SUBDIRS = C1 E1
+SUBDIRS = C1 C2 E1
 
 EXTERNALS = 
 
@@ -61,6 +61,9 @@ all: dose_polimi5
 
 C1/Cobj1.o: Makefile E1/estructure.h
 	cd C1 ; $(START_TEST) $(SHELL) Makefile.SH ; $(MAKE) $(END_TEST)
+
+C2/Cobj2.o: Makefile E1/estructure.h
+	cd C2 ; $(START_TEST) $(SHELL) Makefile.SH ; $(MAKE) $(END_TEST)
 
 E1/Makefile: E1/Makefile.SH
 	cd E1 ; $(SHELL) Makefile.SH
@@ -102,7 +105,7 @@ E1/einit.o: Makefile E1/Makefile E1/estructure.h
 E1/eparents.o: Makefile E1/Makefile E1/estructure.h
 	cd E1 ; $(MAKE) eparents.o
 
-OBJECTS= C1/Cobj1.o  E1/eoption.o E1/epattern.o E1/efrozen.o E1/ecall.o E1/eplug.o E1/eskelet.o E1/enames.o E1/evisib.o E1/ececil.o E1/einit.o E1/eparents.o
+OBJECTS= C2/Cobj2.o C1/Cobj1.o  E1/eoption.o E1/epattern.o E1/efrozen.o E1/ecall.o E1/eplug.o E1/eskelet.o E1/enames.o E1/evisib.o E1/ececil.o E1/einit.o E1/eparents.o
 
 PRECOMP_OBJECTS= "c:\users\marco\documents\eiffel user files\7.1\precomp\spec\win64\EIFGENs\base\W_code\precomp.lib"
 

@@ -11,7 +11,7 @@ create
 
 	make
 
-feature{G21_MOVE, G21_AI, G21_FAKE_BOARD, G21_POINT} --Attributes
+feature{ANY} --Attributes
 
 	x: INTEGER -- the first value of the coordinate
 	y: INTEGER -- the second value of the coordinate

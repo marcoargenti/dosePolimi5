@@ -320,6 +320,7 @@ extern uint32 types139[];
 extern uint32 types181[];
 extern uint32 types74[];
 extern uint32 types18[];
+extern uint32 types879[];
 extern uint32 types70[];
 extern uint32 types209[];
 extern uint32 types116[];
@@ -700,6 +701,74 @@ extern uint32 types157[];
 extern uint32 types205[];
 extern uint32 types105[];
 extern int32 ra329[];
+extern int32 ra330[];
+extern uint32 types848[];
+extern int32 ra331[];
+extern uint32 types847[];
+extern int32 ra332[];
+extern uint32 types846[];
+extern int32 ra333[];
+extern uint32 types845[];
+extern int32 ra334[];
+extern uint32 types844[];
+extern int32 ra335[];
+extern uint32 types843[];
+extern int32 ra336[];
+extern uint32 types842[];
+extern int32 ra337[];
+extern int32 ra338[];
+extern uint32 types840[];
+extern int32 ra339[];
+extern uint32 types839[];
+extern int32 ra340[];
+extern uint32 types838[];
+extern int32 ra341[];
+extern uint32 types874[];
+extern int32 ra342[];
+extern uint32 types872[];
+extern int32 ra343[];
+extern uint32 types866[];
+extern int32 ra344[];
+extern uint32 types849[];
+extern int32 ra345[];
+extern int32 ra346[];
+extern uint32 types856[];
+extern int32 ra347[];
+extern uint32 types873[];
+extern int32 ra348[];
+extern uint32 types862[];
+extern int32 ra349[];
+extern uint32 types870[];
+extern int32 ra350[];
+extern uint32 types877[];
+extern int32 ra351[];
+extern uint32 types876[];
+extern int32 ra352[];
+extern int32 ra353[];
+extern int32 ra354[];
+extern int32 ra355[];
+extern int32 ra356[];
+extern uint32 types878[];
+extern int32 ra357[];
+extern int32 ra358[];
+extern int32 ra359[];
+extern uint32 types865[];
+extern int32 ra360[];
+extern uint32 types868[];
+extern int32 ra361[];
+extern uint32 types869[];
+extern int32 ra362[];
+extern uint32 types875[];
+extern int32 ra363[];
+extern uint32 types864[];
+extern int32 ra364[];
+extern uint32 types859[];
+extern int32 ra365[];
+extern int32 ra366[];
+extern int32 ra367[];
+extern int32 ra368[];
+extern int32 ra369[];
+extern int32 ra370[];
 
 extern char *names5[];
 uint32 types5 [] =
@@ -19745,6 +19814,858 @@ static int32 cn_attr836 [] =
 3129,
 };
 
+extern char *names838[];
+uint32 types838 [] =
+{
+SK_REF,
+SK_CHAR8,
+SK_BOOL,
+SK_INT32,
+};
+
+uint16 attr_flags838 [] =
+{0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype838_0 [] = {0,838,0xFFFF};
+static EIF_TYPE_INDEX g_atype838_1 [] = {0,166,0xFFFF};
+static EIF_TYPE_INDEX g_atype838_2 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype838_3 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes838 [] = {
+g_atype838_0,
+g_atype838_1,
+g_atype838_2,
+g_atype838_3,
+};
+
+static int32 cn_attr838 [] =
+{
+4481,
+4480,
+4479,
+4482,
+};
+
+extern char *names839[];
+uint32 types839 [] =
+{
+SK_REF,
+SK_CHAR8,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+};
+
+uint16 attr_flags839 [] =
+{0,0,0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype839_0 [] = {0,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype839_1 [] = {0,166,0xFFFF};
+static EIF_TYPE_INDEX g_atype839_2 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype839_3 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype839_4 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype839_5 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes839 [] = {
+g_atype839_0,
+g_atype839_1,
+g_atype839_2,
+g_atype839_3,
+g_atype839_4,
+g_atype839_5,
+};
+
+static int32 cn_attr839 [] =
+{
+4498,
+4497,
+4493,
+4494,
+4495,
+4496,
+};
+
+extern char *names840[];
+uint32 types840 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags840 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype840_0 [] = {0,878,837,0xFFFF};
+static EIF_TYPE_INDEX g_atype840_1 [] = {0,240,838,0xFFFF};
+static EIF_TYPE_INDEX g_atype840_2 [] = {0,240,845,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes840 [] = {
+g_atype840_0,
+g_atype840_1,
+g_atype840_2,
+};
+
+static int32 cn_attr840 [] =
+{
+4671,
+4672,
+4680,
+};
+
+extern char *names842[];
+uint32 types842 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags842 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype842_0 [] = {0,878,837,0xFFFF};
+static EIF_TYPE_INDEX g_atype842_1 [] = {0,240,838,0xFFFF};
+static EIF_TYPE_INDEX g_atype842_2 [] = {0,240,845,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes842 [] = {
+g_atype842_0,
+g_atype842_1,
+g_atype842_2,
+};
+
+static int32 cn_attr842 [] =
+{
+4671,
+4672,
+4680,
+};
+
+extern char *names843[];
+uint32 types843 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags843 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype843_0 [] = {0,878,837,0xFFFF};
+static EIF_TYPE_INDEX g_atype843_1 [] = {0,240,838,0xFFFF};
+static EIF_TYPE_INDEX g_atype843_2 [] = {0,240,844,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes843 [] = {
+g_atype843_0,
+g_atype843_1,
+g_atype843_2,
+};
+
+static int32 cn_attr843 [] =
+{
+4671,
+4672,
+4675,
+};
+
+extern char *names844[];
+uint32 types844 [] =
+{
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags844 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype844_0 [] = {0,878,837,0xFFFF};
+static EIF_TYPE_INDEX g_atype844_1 [] = {0,240,838,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes844 [] = {
+g_atype844_0,
+g_atype844_1,
+};
+
+static int32 cn_attr844 [] =
+{
+4671,
+4672,
+};
+
+extern char *names845[];
+uint32 types845 [] =
+{
+SK_INT32,
+SK_INT32,
+};
+
+uint16 attr_flags845 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype845_0 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype845_1 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes845 [] = {
+g_atype845_0,
+g_atype845_1,
+};
+
+static int32 cn_attr845 [] =
+{
+4948,
+4949,
+};
+
+extern char *names846[];
+uint32 types846 [] =
+{
+SK_REF,
+SK_REF,
+SK_INT32,
+};
+
+uint16 attr_flags846 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype846_0 [] = {0,838,0xFFFF};
+static EIF_TYPE_INDEX g_atype846_1 [] = {0,844,0xFFFF};
+static EIF_TYPE_INDEX g_atype846_2 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes846 [] = {
+g_atype846_0,
+g_atype846_1,
+g_atype846_2,
+};
+
+static int32 cn_attr846 [] =
+{
+4955,
+4956,
+4960,
+};
+
+extern char *names847[];
+uint32 types847 [] =
+{
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags847 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype847_0 [] = {0,838,0xFFFF};
+static EIF_TYPE_INDEX g_atype847_1 [] = {0,844,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes847 [] = {
+g_atype847_0,
+g_atype847_1,
+};
+
+static int32 cn_attr847 [] =
+{
+4955,
+4956,
+};
+
+extern char *names848[];
+uint32 types848 [] =
+{
+SK_REF,
+};
+
+uint16 attr_flags848 [] =
+{0,};
+
+static EIF_TYPE_INDEX g_atype848_0 [] = {0,878,837,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes848 [] = {
+g_atype848_0,
+};
+
+static int32 cn_attr848 [] =
+{
+4519,
+};
+
+extern char *names849[];
+uint32 types849 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_INT32,
+};
+
+uint16 attr_flags849 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype849_0 [] = {0,140,0xFFFF};
+static EIF_TYPE_INDEX g_atype849_1 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype849_2 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes849 [] = {
+g_atype849_0,
+g_atype849_1,
+g_atype849_2,
+};
+
+static int32 cn_attr849 [] =
+{
+4470,
+4455,
+4463,
+};
+
+extern char *names856[];
+uint32 types856 [] =
+{
+SK_INT32,
+SK_REAL64,
+};
+
+uint16 attr_flags856 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype856_0 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype856_1 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes856 [] = {
+g_atype856_0,
+g_atype856_1,
+};
+
+static int32 cn_attr856 [] =
+{
+4567,
+4566,
+};
+
+extern char *names859[];
+uint32 types859 [] =
+{
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags859 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype859_0 [] = {0,855,0xFFFF};
+static EIF_TYPE_INDEX g_atype859_1 [] = {0,867,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes859 [] = {
+g_atype859_0,
+g_atype859_1,
+};
+
+static int32 cn_attr859 [] =
+{
+4600,
+4601,
+};
+
+extern char *names862[];
+uint32 types862 [] =
+{
+SK_REF,
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+};
+
+uint16 attr_flags862 [] =
+{0,0,0,0,0,0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype862_0 [] = {0,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_1 [] = {0,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_2 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_3 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_4 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_5 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_6 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_7 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype862_8 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes862 [] = {
+g_atype862_0,
+g_atype862_1,
+g_atype862_2,
+g_atype862_3,
+g_atype862_4,
+g_atype862_5,
+g_atype862_6,
+g_atype862_7,
+g_atype862_8,
+};
+
+static int32 cn_attr862 [] =
+{
+4638,
+4641,
+4645,
+4646,
+4639,
+4640,
+4642,
+4643,
+4644,
+};
+
+extern char *names864[];
+uint32 types864 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags864 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype864_0 [] = {0,875,0xFFFF};
+static EIF_TYPE_INDEX g_atype864_1 [] = {0,865,0xFFFF};
+static EIF_TYPE_INDEX g_atype864_2 [] = {0,864,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes864 [] = {
+g_atype864_0,
+g_atype864_1,
+g_atype864_2,
+};
+
+static int32 cn_attr864 [] =
+{
+4724,
+4736,
+4737,
+};
+
+extern char *names865[];
+uint32 types865 [] =
+{
+SK_REF,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+};
+
+uint16 attr_flags865 [] =
+{0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype865_0 [] = {0,869,0xFFFF};
+static EIF_TYPE_INDEX g_atype865_1 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype865_2 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype865_3 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes865 [] = {
+g_atype865_0,
+g_atype865_1,
+g_atype865_2,
+g_atype865_3,
+};
+
+static int32 cn_attr865 [] =
+{
+4740,
+4752,
+4753,
+4754,
+};
+
+extern char *names866[];
+uint32 types866 [] =
+{
+SK_INT32,
+SK_INT32,
+SK_REAL64,
+};
+
+uint16 attr_flags866 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype866_0 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype866_1 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype866_2 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes866 [] = {
+g_atype866_0,
+g_atype866_1,
+g_atype866_2,
+};
+
+static int32 cn_attr866 [] =
+{
+4772,
+4773,
+4771,
+};
+
+extern char *names868[];
+uint32 types868 [] =
+{
+SK_INT32,
+};
+
+uint16 attr_flags868 [] =
+{0,};
+
+static EIF_TYPE_INDEX g_atype868_0 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes868 [] = {
+g_atype868_0,
+};
+
+static int32 cn_attr868 [] =
+{
+4779,
+};
+
+extern char *names869[];
+uint32 types869 [] =
+{
+SK_INT32,
+};
+
+uint16 attr_flags869 [] =
+{0,};
+
+static EIF_TYPE_INDEX g_atype869_0 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes869 [] = {
+g_atype869_0,
+};
+
+static int32 cn_attr869 [] =
+{
+4779,
+};
+
+extern char *names870[];
+uint32 types870 [] =
+{
+SK_INT32,
+};
+
+uint16 attr_flags870 [] =
+{0,};
+
+static EIF_TYPE_INDEX g_atype870_0 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes870 [] = {
+g_atype870_0,
+};
+
+static int32 cn_attr870 [] =
+{
+4779,
+};
+
+extern char *names872[];
+uint32 types872 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+};
+
+uint16 attr_flags872 [] =
+{0,0,0,0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype872_0 [] = {0,439,861,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype872_1 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype872_2 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype872_3 [] = {0,876,0xFFFF};
+static EIF_TYPE_INDEX g_atype872_4 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype872_5 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype872_6 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes872 [] = {
+g_atype872_0,
+g_atype872_1,
+g_atype872_2,
+g_atype872_3,
+g_atype872_4,
+g_atype872_5,
+g_atype872_6,
+};
+
+static int32 cn_attr872 [] =
+{
+4838,
+4857,
+4858,
+4861,
+4845,
+4859,
+4840,
+};
+
+extern char *names873[];
+uint32 types873 [] =
+{
+SK_INT32,
+SK_REAL64,
+};
+
+uint16 attr_flags873 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype873_0 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype873_1 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes873 [] = {
+g_atype873_0,
+g_atype873_1,
+};
+
+static int32 cn_attr873 [] =
+{
+4567,
+4566,
+};
+
+extern char *names874[];
+uint32 types874 [] =
+{
+SK_INT32,
+SK_REAL64,
+};
+
+uint16 attr_flags874 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype874_0 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype874_1 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes874 [] = {
+g_atype874_0,
+g_atype874_1,
+};
+
+static int32 cn_attr874 [] =
+{
+4567,
+4566,
+};
+
+extern char *names875[];
+uint32 types875 [] =
+{
+SK_INT32,
+SK_INT32,
+SK_REAL64,
+};
+
+uint16 attr_flags875 [] =
+{0,0,0,};
+
+static EIF_TYPE_INDEX g_atype875_0 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype875_1 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype875_2 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes875 [] = {
+g_atype875_0,
+g_atype875_1,
+g_atype875_2,
+};
+
+static int32 cn_attr875 [] =
+{
+4567,
+4779,
+4566,
+};
+
+extern char *names876[];
+uint32 types876 [] =
+{
+SK_REF,
+SK_REF,
+SK_INT32,
+SK_INT32,
+SK_REAL64,
+};
+
+uint16 attr_flags876 [] =
+{0,0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype876_0 [] = {0,873,0xFFFF};
+static EIF_TYPE_INDEX g_atype876_1 [] = {0,869,0xFFFF};
+static EIF_TYPE_INDEX g_atype876_2 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype876_3 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype876_4 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes876 [] = {
+g_atype876_0,
+g_atype876_1,
+g_atype876_2,
+g_atype876_3,
+g_atype876_4,
+};
+
+static int32 cn_attr876 [] =
+{
+4600,
+4601,
+4567,
+4779,
+4566,
+};
+
+extern char *names877[];
+uint32 types877 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+SK_REF,
+SK_REF,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_REAL64,
+SK_REAL64,
+};
+
+uint16 attr_flags877 [] =
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype877_0 [] = {0,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_1 [] = {0,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_2 [] = {0,439,861,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_3 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_4 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_5 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_6 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_7 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_8 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_9 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_10 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_11 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_12 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_13 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_14 [] = {0,175,0xFFFF};
+static EIF_TYPE_INDEX g_atype877_15 [] = {0,175,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes877 [] = {
+g_atype877_0,
+g_atype877_1,
+g_atype877_2,
+g_atype877_3,
+g_atype877_4,
+g_atype877_5,
+g_atype877_6,
+g_atype877_7,
+g_atype877_8,
+g_atype877_9,
+g_atype877_10,
+g_atype877_11,
+g_atype877_12,
+g_atype877_13,
+g_atype877_14,
+g_atype877_15,
+};
+
+static int32 cn_attr877 [] =
+{
+4918,
+4943,
+4944,
+4945,
+4946,
+4926,
+4567,
+4779,
+4937,
+4938,
+4939,
+4940,
+4941,
+4947,
+4566,
+4942,
+};
+
+extern char *names878[];
+uint32 types878 [] =
+{
+SK_REF,
+SK_REF,
+};
+
+uint16 attr_flags878 [] =
+{0,0,};
+
+static EIF_TYPE_INDEX g_atype878_0 [] = {0,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX g_atype878_1 [] = {0,0xFFF8,1,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes878 [] = {
+g_atype878_0,
+g_atype878_1,
+};
+
+static int32 cn_attr878 [] =
+{
+4692,
+4693,
+};
+
+extern char *names879[];
+uint32 types879 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+};
+
+uint16 attr_flags879 [] =
+{0,0,0,0,0,0,};
+
+static EIF_TYPE_INDEX g_atype879_0 [] = {0,219,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX g_atype879_1 [] = {0,172,0xFFFF};
+static EIF_TYPE_INDEX g_atype879_2 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype879_3 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype879_4 [] = {0,187,0xFFFF};
+static EIF_TYPE_INDEX g_atype879_5 [] = {0,187,0xFFFF};
+
+static EIF_TYPE_INDEX *gtypes879 [] = {
+g_atype879_0,
+g_atype879_1,
+g_atype879_2,
+g_atype879_3,
+g_atype879_4,
+g_atype879_5,
+};
+
+static int32 cn_attr879 [] =
+{
+2303,
+1676,
+2366,
+2367,
+2401,
+2402,
+};
+
 struct cnode egc_fsystem_init[] = {
 {
 	(long) 0,
@@ -33974,6 +34895,720 @@ struct cnode egc_fsystem_init[] = {
 	ra329,
 	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
 	NULL
+},
+{
+	(long) 4,
+	(long) 4,
+	"G21_CELL",
+	names838,
+	types838,
+	attr_flags838,
+	gtypes838,
+	(uint16) 0,
+	cn_attr838,
+	16,
+	1L,
+	(int32) 0,(int32) 837,
+	ra340,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 6,
+	(long) 6,
+	"G21_CARD",
+	names839,
+	types839,
+	attr_flags839,
+	gtypes839,
+	(uint16) 0,
+	cn_attr839,
+	32,
+	1L,
+	(int32) 0,(int32) 838,
+	ra339,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"G21_NOT_EASY_AI",
+	names840,
+	types840,
+	attr_flags840,
+	gtypes840,
+	(uint16) 4096,
+	cn_attr840,
+	24,
+	3L,
+	(int32) 0,(int32) 839,
+	ra338,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"G21_HARD_AI",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 840,
+	ra337,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"G21_MEDIUM_AI",
+	names842,
+	types842,
+	attr_flags842,
+	gtypes842,
+	(uint16) 0,
+	cn_attr842,
+	24,
+	3L,
+	(int32) 0,(int32) 841,
+	ra336,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"G21_EASY_AI",
+	names843,
+	types843,
+	attr_flags843,
+	gtypes843,
+	(uint16) 0,
+	cn_attr843,
+	24,
+	3L,
+	(int32) 0,(int32) 842,
+	ra335,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"G21_AI",
+	names844,
+	types844,
+	attr_flags844,
+	gtypes844,
+	(uint16) 4096,
+	cn_attr844,
+	16,
+	2L,
+	(int32) 0,(int32) 843,
+	ra334,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"G21_POINT",
+	names845,
+	types845,
+	attr_flags845,
+	gtypes845,
+	(uint16) 0,
+	cn_attr845,
+	8,
+	0L,
+	(int32) 0,(int32) 844,
+	ra333,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"G21_VALUATED_MOVE",
+	names846,
+	types846,
+	attr_flags846,
+	gtypes846,
+	(uint16) 0,
+	cn_attr846,
+	24,
+	2L,
+	(int32) 0,(int32) 845,
+	ra332,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"G21_MOVE",
+	names847,
+	types847,
+	attr_flags847,
+	gtypes847,
+	(uint16) 0,
+	cn_attr847,
+	16,
+	2L,
+	(int32) 0,(int32) 846,
+	ra331,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 1,
+	(long) 1,
+	"G21_FAKE_BOARD",
+	names848,
+	types848,
+	attr_flags848,
+	gtypes848,
+	(uint16) 0,
+	cn_attr848,
+	8,
+	1L,
+	(int32) 0,(int32) 847,
+	ra330,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"C_DATE",
+	names849,
+	types849,
+	attr_flags849,
+	gtypes849,
+	(uint16) 0,
+	cn_attr849,
+	16,
+	1L,
+	(int32) 31,(int32) 848,
+	ra344,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"DATE_TIME_LANGUAGE_CONSTANTS",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 849,
+	ra370,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"DATE_TIME_TOOLS",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 850,
+	ra369,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"GROUP_ELEMENT",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 851,
+	ra366,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"TIME_UTILITY",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 852,
+	ra365,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"TIME_CONSTANTS",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 853,
+	ra357,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"TIME_MEASUREMENT",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 854,
+	ra355,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"TIME_VALUE",
+	names856,
+	types856,
+	attr_flags856,
+	gtypes856,
+	(uint16) 0,
+	cn_attr856,
+	16,
+	0L,
+	(int32) 26,(int32) 855,
+	ra346,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"DATE_CONSTANTS",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 856,
+	ra352,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"DATE_TIME_MEASUREMENT",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 857,
+	ra368,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"DATE_TIME_VALUE",
+	names859,
+	types859,
+	attr_flags859,
+	gtypes859,
+	(uint16) 4096,
+	cn_attr859,
+	16,
+	2L,
+	(int32) 0,(int32) 858,
+	ra364,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"DATE_MEASUREMENT",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 859,
+	ra367,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"CODE_VALIDITY_CHECKER",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 860,
+	ra358,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 9,
+	(long) 9,
+	"DATE_TIME_CODE",
+	names862,
+	types862,
+	attr_flags862,
+	gtypes862,
+	(uint16) 0,
+	cn_attr862,
+	40,
+	2L,
+	(int32) 0,(int32) 861,
+	ra348,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"DURATION",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 862,
+	ra354,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"DATE_TIME_DURATION",
+	names864,
+	types864,
+	attr_flags864,
+	gtypes864,
+	(uint16) 0,
+	cn_attr864,
+	24,
+	3L,
+	(int32) 0,(int32) 863,
+	ra363,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 4,
+	(long) 4,
+	"DATE_DURATION",
+	names865,
+	types865,
+	attr_flags865,
+	gtypes865,
+	(uint16) 0,
+	cn_attr865,
+	24,
+	1L,
+	(int32) 0,(int32) 864,
+	ra359,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"TIME_DURATION",
+	names866,
+	types866,
+	attr_flags866,
+	gtypes866,
+	(uint16) 0,
+	cn_attr866,
+	16,
+	0L,
+	(int32) 0,(int32) 865,
+	ra343,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"ABSOLUTE",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,(int32) 866,
+	ra345,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 1,
+	(long) 1,
+	"DATE_VALUE",
+	names868,
+	types868,
+	attr_flags868,
+	gtypes868,
+	(uint16) 0,
+	cn_attr868,
+	8,
+	0L,
+	(int32) 26,(int32) 867,
+	ra360,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 1,
+	(long) 1,
+	"DATE_VALIDITY_CHECKER",
+	names869,
+	types869,
+	attr_flags869,
+	gtypes869,
+	(uint16) 0,
+	cn_attr869,
+	8,
+	0L,
+	(int32) 26,(int32) 868,
+	ra361,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 1,
+	(long) 1,
+	"DATE",
+	names870,
+	types870,
+	attr_flags870,
+	gtypes870,
+	(uint16) 0,
+	cn_attr870,
+	8,
+	0L,
+	(int32) 0,(int32) 869,
+	ra349,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"FIND_SEPARATOR_FACILITY",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 26,(int32) 870,
+	ra353,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 7,
+	(long) 7,
+	"DATE_TIME_CODE_STRING",
+	names872,
+	types872,
+	attr_flags872,
+	gtypes872,
+	(uint16) 0,
+	cn_attr872,
+	40,
+	4L,
+	(int32) 0,(int32) 871,
+	ra342,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"TIME_VALIDITY_CHECKER",
+	names873,
+	types873,
+	attr_flags873,
+	gtypes873,
+	(uint16) 0,
+	cn_attr873,
+	16,
+	0L,
+	(int32) 26,(int32) 872,
+	ra347,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"TIME",
+	names874,
+	types874,
+	attr_flags874,
+	gtypes874,
+	(uint16) 0,
+	cn_attr874,
+	16,
+	0L,
+	(int32) 0,(int32) 873,
+	ra341,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"DATE_TIME_VALIDITY_CHECKER",
+	names875,
+	types875,
+	attr_flags875,
+	gtypes875,
+	(uint16) 0,
+	cn_attr875,
+	16,
+	0L,
+	(int32) 26,(int32) 874,
+	ra362,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 5,
+	(long) 5,
+	"DATE_TIME",
+	names876,
+	types876,
+	attr_flags876,
+	gtypes876,
+	(uint16) 0,
+	cn_attr876,
+	32,
+	2L,
+	(int32) 0,(int32) 875,
+	ra351,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 16,
+	(long) 16,
+	"DATE_TIME_PARSER",
+	names877,
+	types877,
+	attr_flags877,
+	gtypes877,
+	(uint16) 0,
+	cn_attr877,
+	96,
+	5L,
+	(int32) 0,(int32) 876,
+	ra350,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"INTERVAL",
+	names878,
+	types878,
+	attr_flags878,
+	gtypes878,
+	(uint16) 0,
+	cn_attr878,
+	16,
+	2L,
+	(int32) 0,(int32) 877,
+	ra356,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
+},
+{
+	(long) 6,
+	(long) 6,
+	"ARRAY2",
+	names879,
+	types879,
+	attr_flags879,
+	gtypes879,
+	(uint16) 0,
+	cn_attr879,
+	32,
+	1L,
+	(int32) 0,(int32) 0,
+	(int32 *) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0},
+	NULL
 },};
 
 int32 *egc_fcall_init[] = {
@@ -34814,6 +36449,48 @@ int32 *egc_fcall_init[] = {
 (int32 *) 0,
 (int32 *) 0,
 ra329,
+ra340,
+ra339,
+ra338,
+ra337,
+ra336,
+ra335,
+ra334,
+ra333,
+ra332,
+ra331,
+ra330,
+ra344,
+ra370,
+ra369,
+ra366,
+ra365,
+ra357,
+ra355,
+ra346,
+ra352,
+ra368,
+ra364,
+ra367,
+ra358,
+ra348,
+ra354,
+ra363,
+ra359,
+ra343,
+ra345,
+ra360,
+ra361,
+ra349,
+ra353,
+ra342,
+ra347,
+ra341,
+ra362,
+ra351,
+ra350,
+ra356,
+(int32 *) 0,
 };
 
 #ifdef __cplusplus

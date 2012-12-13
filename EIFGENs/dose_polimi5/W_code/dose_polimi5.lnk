@@ -5,4 +5,4 @@ USER32.lib WS2_32.lib ADVAPI32.lib GDI32.lib SHELL32.lib MSIMG32.lib COMDLG32.li
 dose_polimi5.res 
 E1\eparents.obj E1\einit.obj E1\ececil.obj E1\evisib.obj E1\enames.obj 
 E1\eskelet.obj E1\eplug.obj E1\ecall.obj E1\efrozen.obj E1\epattern.obj 
-E1\eoption.obj C1\Cobj1.lib 
+E1\eoption.obj C2\Cobj2.lib C1\Cobj1.lib 

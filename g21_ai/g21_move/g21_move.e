@@ -11,7 +11,7 @@ class
 create
 	make
 
-feature{G21_MOVE, G21_AI, G21_BOARD, G21_FAKE_BOARD} -- Attributes
+feature{ANY} -- Attributes
 
 	card: G21_CARD -- a COPY of the card received during the creation of this object
 	position: G21_POINT -- an object that indicates where the card has to set

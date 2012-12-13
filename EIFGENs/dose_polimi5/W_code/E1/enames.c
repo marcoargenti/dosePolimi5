@@ -4765,6 +4765,219 @@ char *names836 [] =
 "internal_name",
 };
 
+char *names838 [] =
+{
+"card",
+"element",
+"isoccupied",
+"playernumber",
+};
+
+char *names839 [] =
+{
+"cardname",
+"element",
+"right",
+"left",
+"top",
+"bottom",
+};
+
+char *names840 [] =
+{
+"board",
+"cards",
+"valuated_moves",
+};
+
+char *names842 [] =
+{
+"board",
+"cards",
+"valuated_moves",
+};
+
+char *names843 [] =
+{
+"board",
+"cards",
+"free_positions",
+};
+
+char *names844 [] =
+{
+"board",
+"cards",
+};
+
+char *names845 [] =
+{
+"x",
+"y",
+};
+
+char *names846 [] =
+{
+"card",
+"position",
+"value",
+};
+
+char *names847 [] =
+{
+"card",
+"position",
+};
+
+char *names848 [] =
+{
+"fake_board",
+};
+
+char *names849 [] =
+{
+"internal_item",
+"is_utc",
+"millisecond_now",
+};
+
+char *names856 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names859 [] =
+{
+"time",
+"date",
+};
+
+char *names862 [] =
+{
+"value",
+"name",
+"is_text",
+"is_numeric",
+"count_max",
+"count_min",
+"value_max",
+"value_min",
+"type",
+};
+
+char *names864 [] =
+{
+"origin_date_time",
+"time",
+"date",
+};
+
+char *names865 [] =
+{
+"origin_date",
+"year",
+"month",
+"day",
+};
+
+char *names866 [] =
+{
+"minute",
+"hour",
+"fine_second",
+};
+
+char *names868 [] =
+{
+"ordered_compact_date",
+};
+
+char *names869 [] =
+{
+"ordered_compact_date",
+};
+
+char *names870 [] =
+{
+"ordered_compact_date",
+};
+
+char *names872 [] =
+{
+"value",
+"days",
+"months",
+"internal_parser",
+"separators_used",
+"right_day_text",
+"base_century",
+};
+
+char *names873 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names874 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names875 [] =
+{
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
+};
+
+char *names876 [] =
+{
+"time",
+"date",
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
+};
+
+char *names877 [] =
+{
+"source_string",
+"day_text_val",
+"code",
+"months",
+"days",
+"parsed",
+"compact_time",
+"ordered_compact_date",
+"year_val",
+"month_val",
+"day_val",
+"hour_val",
+"minute_val",
+"base_century",
+"fractional_second",
+"fine_second_val",
+};
+
+char *names878 [] =
+{
+"start_bound",
+"end_bound",
+};
+
+char *names879 [] =
+{
+"area",
+"object_comparison",
+"lower",
+"upper",
+"height",
+"width",
+};
+
 
 
 #ifdef __cplusplus
