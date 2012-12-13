@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-10-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-10-0 http://www.eiffel.com/developers/xml/configuration-1-10-0.xsd" name="dose_polimi5" uuid="9995504C-09E1-485A-8B89-61B2514419F3">
+	<target name="dose_polimi5">
+		<root class="MAIN" feature="make"/>
+		<option warning="true" is_attached_by_default="false" syntax="transitional">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<cluster name="dose_polimi5" location=".\">
+			<file_rule>
+				<exclude>/EIFGENs$</exclude>
+				<exclude>/CVS$</exclude>
+				<exclude>/.svn$</exclude>
+			</file_rule>
+			<cluster name="g21_ai" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\">
+				<cluster name="g21_point" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\g21_point\"/>
+				<cluster name="g21_move" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\g21_move\"/>
+				<cluster name="g21_fake_board" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\g21_fake_board\"/>
+			</cluster>
+			<cluster name="g21_logic" location="c:\users\marco\documents\github\dosepolimi5\g21_logic\"/>
+		</cluster>
+	</target>
+</system>

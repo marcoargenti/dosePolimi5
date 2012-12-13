@@ -1,1 +1,1 @@
-badula
+Progetto DOSE 2012. Repository di appoggio.
