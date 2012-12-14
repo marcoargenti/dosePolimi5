@@ -4809,7 +4809,19 @@ char *names846 [] =
 "value",
 };
 
-char *names848 [] =
+char *names850 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names853 [] =
+{
+"time",
+"date",
+};
+
+char *names856 [] =
 {
 "value",
 "name",
@@ -4820,18 +4832,6 @@ char *names848 [] =
 "value_max",
 "value_min",
 "type",
-};
-
-char *names852 [] =
-{
-"compact_time",
-"fractional_second",
-};
-
-char *names855 [] =
-{
-"time",
-"date",
 };
 
 char *names857 [] =

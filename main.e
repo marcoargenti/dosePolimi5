@@ -98,7 +98,8 @@ feature {NONE} -- main feature
 				end
 			end
 			print("La partita è conclusa.%N%N")
-			print_on_io_array(print_board())
+		--	print_on_io_array(print_board)
+			str:=print_board
 
 		end
 
@@ -180,7 +181,7 @@ feature {ANY} --support feature
 			str:ARRAY[STRING]
 		do
 			str:=print_board()
-			print_on_io_array(str)
+		--	print_on_io_array(str)
 			if(number_player=1) then
 				str:=print_cards(cards)
 			else
@@ -311,8 +312,7 @@ feature {ANY} --support feature
 				not str.valid_index (i)
 			loop
 				print(str[i])
-				io.put_new_line
-				io.put_new_line
+				print("%N")
 				io.put_new_line
 				i:=i+1
 			end
@@ -341,20 +341,28 @@ feature {ANY} --support feature
 						j > 3
 					loop
 						temp:= print_cell(board.item (i, j))
-
+						print(i)
+						print(",")
+						print(j)
+						print("%N")
+						print_on_io_array( print_cell(board.item (i, j)) )
+						print("%N")
 						from
 							k:= 1
 						until
 							k > 3
 						loop
-							r[k+(i-1)*3].append(temp[k])
+							r[(k+(i-1)*3)].append(temp[k])
+							r[k+(i-1)*3].append(i.to_hex_string)
+							r[k+(i-1)*3].append(j.to_hex_string)
+							r[k+(i-1)*3].append(k.to_hex_string)
 							k:=k+1
 						end
+						temp.discard_items
 						j := j + 1
 					end
 				i := i + 1
 			end
-
 			result:=r
 		end
 

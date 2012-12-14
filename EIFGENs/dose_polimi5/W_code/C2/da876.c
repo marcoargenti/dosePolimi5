@@ -96,7 +96,7 @@ void F876_7092 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTDBGEAA(875, Current, 12326);
 	if (arg1) {
 		{
-			static EIF_TYPE_INDEX typarr0[] = {875,439,847,187,0xFFFF};
+			static EIF_TYPE_INDEX typarr0[] = {875,439,855,187,0xFFFF};
 			EIF_TYPE_INDEX typres0;
 			static EIF_TYPE_INDEX typcache0 = INVALID_DTYPE;
 			
@@ -1365,7 +1365,7 @@ body:;
 		ti4_1 = *(EIF_INTEGER_32 *)(loc7 + RTVPA(324, 31, "count", loc7));
 		if ((EIF_BOOLEAN) (loc1 > ti4_1)) break;
 		RTHOOK(16);
-		RTDBGAL(Current, 13, 0xF800034F, 0, 0); /* loc13 */
+		RTDBGAL(Current, 13, 0xF8000357, 0, 0); /* loc13 */
 		
 		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(875, 173, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 		RTNHOOK(16,1);
@@ -1392,7 +1392,7 @@ body:;
 				RTHOOK(21);
 				RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
 				
-				ti4_2 = *(EIF_INTEGER_32 *)(loc13 + RTVA(847, 61, "count_max", loc13));
+				ti4_2 = *(EIF_INTEGER_32 *)(loc13 + RTVA(855, 61, "count_max", loc13));
 				loc2 = (EIF_INTEGER_32) (EIF_INTEGER_32) ((EIF_INTEGER_32) ((EIF_INTEGER_32) (loc1 + ti4_2) - ((EIF_INTEGER_32) 1L)) * ((EIF_INTEGER_32) -1L));
 			}
 			RTHOOK(22);
@@ -1414,7 +1414,7 @@ body:;
 			RTHOOK(24);
 			RTDBGAL(Current, 5, 0x10000000, 1, 0); /* loc5 */
 			
-			ti4_2 = *(EIF_INTEGER_32 *)(loc13 + RTVA(847, 66, "type", loc13));
+			ti4_2 = *(EIF_INTEGER_32 *)(loc13 + RTVA(855, 66, "type", loc13));
 			loc5 = (EIF_INTEGER_32) ti4_2;
 			RTHOOK(25);
 			switch (loc5) {

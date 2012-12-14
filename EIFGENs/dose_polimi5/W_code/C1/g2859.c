@@ -670,8 +670,9 @@ EIF_TYPED_VALUE F859_6767 (EIF_REFERENCE Current)
 		RTNHOOK(13,1);
 		tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(844, 32, "card", Result))(Result)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
 		ur1 = RTCCL(tr2);
-		tb2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVPF(75, 0, "has", tr1))(tr1, ur1x)).it_b);
-		if ((EIF_BOOLEAN)(tb2 == (EIF_BOOLEAN) 1)) {
+		ui4_1 = ((EIF_INTEGER_32) 1L);
+		ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVPF(150, 0, "index_of", tr1))(tr1, ur1x, ui4_1x)).it_i4);
+		if ((EIF_BOOLEAN)(ti4_1 != ((EIF_INTEGER_32) 0L))) {
 			RTCK;
 		} else {
 			RTCF;

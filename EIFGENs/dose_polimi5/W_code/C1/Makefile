@@ -46,13 +46,13 @@ OLDOBJECTS =  ma866.obj ma866d.obj ma866f.obj g2858.obj g2858d.obj g2858f.obj g2
 	g2857.obj g2857d.obj g2857f.obj g2840.obj g2840d.obj g2840f.obj g2839.obj g2839d.obj \
 	g2839f.obj g2838.obj g2838d.obj g2838f.obj g2846.obj g2846d.obj g2846f.obj g2859.obj \
 	g2859d.obj g2859f.obj c_837.obj c_837d.obj c_837f.obj ti864.obj ti864d.obj ti864f.obj \
-	ab865.obj ab865d.obj ab865f.obj ti852.obj ti852d.obj ti852f.obj da853.obj da853d.obj \
-	da853f.obj da848.obj da848d.obj da848f.obj du861.obj du861d.obj du861f.obj ti851.obj \
-	ti851d.obj ti851f.obj ti850.obj ti850d.obj ti850f.obj ti849.obj ti849d.obj ti849f.obj \
-	co847.obj co847d.obj co847f.obj da863.obj da863d.obj da863f.obj da862.obj da862d.obj \
-	da862f.obj da855.obj da855d.obj da855f.obj da867.obj da867d.obj da867f.obj da868.obj \
-	da868d.obj da868f.obj gr844.obj gr844d.obj gr844f.obj da843.obj da843d.obj da843f.obj \
-	da856.obj da856d.obj da856f.obj da854.obj da854d.obj da854f.obj da842.obj da842d.obj \
+	ab865.obj ab865d.obj ab865f.obj ti850.obj ti850d.obj ti850f.obj da856.obj da856d.obj \
+	da856f.obj da851.obj da851d.obj da851f.obj du861.obj du861d.obj du861f.obj ti849.obj \
+	ti849d.obj ti849f.obj ti848.obj ti848d.obj ti848f.obj co855.obj co855d.obj co855f.obj \
+	da863.obj da863d.obj da863f.obj da867.obj da867d.obj da867f.obj da868.obj da868d.obj \
+	da868f.obj ti847.obj ti847d.obj ti847f.obj da862.obj da862d.obj da862f.obj da853.obj \
+	da853d.obj da853f.obj gr844.obj gr844d.obj gr844f.obj da854.obj da854d.obj da854f.obj \
+	da843.obj da843d.obj da843f.obj da852.obj da852d.obj da852f.obj da842.obj da842d.obj \
 	da842f.obj 
 
 all::  Cobj1.lib

@@ -1,5 +1,5 @@
 /*
- * Class TIME_MEASUREMENT
+ * Class DATE_CONSTANTS
  */
 
 #include "eif_macros.h"
@@ -13,6 +13,11 @@ static EIF_TYPE_INDEX gen_type0_851 [] = {0,218,850,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_851 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_851 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_851 [] = {0,0,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_851 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_851 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_851 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_851 [] = {0,231,201,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_851 [] = {0,384,187,0xFFFF};
 
 
 static struct desc_info desc_851[] = {
@@ -48,25 +53,24 @@ static struct desc_info desc_851[] = {
 	{28, (BODY_INDEX)-1, 850, NULL},
 	{29, (BODY_INDEX)-1, 196, NULL},
 	{30, (BODY_INDEX)-1, 850, NULL},
-	{11899, (BODY_INDEX)-1, 187, NULL},
-	{11900, (BODY_INDEX)-1, 187, NULL},
-	{11901, (BODY_INDEX)-1, 842, NULL},
-	{11902, (BODY_INDEX)-1, 201, NULL},
-	{11903, (BODY_INDEX)-1, 187, NULL},
-	{11904, (BODY_INDEX)-1, 187, NULL},
-	{11905, (BODY_INDEX)-1, 187, NULL},
-	{11906, (BODY_INDEX)-1, 187, NULL},
-	{11907, (BODY_INDEX)-1, 187, NULL},
-	{11908, (BODY_INDEX)-1, 201, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 187, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 187, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 187, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 175, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11838, (BODY_INDEX)-1, 187, NULL},
+	{11839, (BODY_INDEX)-1, 187, NULL},
+	{11840, (BODY_INDEX)-1, 842, NULL},
+	{11841, (BODY_INDEX)-1, 201, NULL},
+	{11872, (BODY_INDEX)-1, 187, NULL},
+	{11873, (BODY_INDEX)-1, 187, NULL},
+	{11874, (BODY_INDEX)-1, 187, NULL},
+	{11875, (BODY_INDEX)-1, 187, NULL},
+	{11876, (BODY_INDEX)-1, 187, NULL},
+	{11877, (BODY_INDEX)-1, 187, NULL},
+	{11878, (BODY_INDEX)-1, 201, NULL},
+	{11879, (BODY_INDEX)-1, 231, gen_type4_851},
+	{11880, (BODY_INDEX)-1, 231, gen_type5_851},
+	{11867, (BODY_INDEX)-1, 231, gen_type6_851},
+	{11868, (BODY_INDEX)-1, 231, gen_type7_851},
+	{11869, (BODY_INDEX)-1, 172, NULL},
+	{11870, (BODY_INDEX)-1, 172, NULL},
+	{11871, (BODY_INDEX)-1, 384, gen_type8_851},
 };
 
 extern void Init851(void);
@@ -74,9 +78,8 @@ void Init851(void)
 {
 	IDSC(desc_851, 0, 850);
 	IDSC(desc_851 + 1, 1, 850);
-	IDSC(desc_851 + 32, 358, 850);
-	IDSC(desc_851 + 36, 356, 850);
-	IDSC(desc_851 + 42, 354, 850);
+	IDSC(desc_851 + 32, 362, 850);
+	IDSC(desc_851 + 36, 350, 850);
 }
 
 
