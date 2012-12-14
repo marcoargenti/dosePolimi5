@@ -13,14 +13,14 @@ feature{G21_AI} -- Attributes
 	board: ARRAY2[G21_CELL] -- a link to the board used by the Logic component
 	cards: ARRAYED_LIST[G21_CARD] -- a link to the AI deck stored in Logic component
 
-feature{G21_AI} -- Interface Procedures, the only method the Logic component can use to call the AI
+feature{G21_AI,MAIN} -- Interface Procedures, the only method the Logic component can use to call the AI
 
 	make_a_move (card_position: G21_POINT; player_card: G21_CARD): G21_MOVE --it returns and object move that the Logic will use to make AI move
 
 		require
 
 			position_enemy_card: card_position=void or else board.item(card_position.y, card_position.x).isOccupied=TRUE
-			valid_player_card: player_card/=void
+		--	valid_player_card: player_card/=void
 
 		deferred
 

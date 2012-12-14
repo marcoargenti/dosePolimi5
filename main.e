@@ -29,6 +29,11 @@ feature {NONE} -- main feature
 			str: ARRAY[STRING]
 			read:INTEGER
 			number_player: INTEGER
+			temp_x:INTEGER
+			temp_y:INTEGER
+			temp_move:G21_MOVE
+			temp_position: G21_POINT
+			temp_index_card:INTEGER
 		do
 			print ("Triple Triad!%N")
 
@@ -61,12 +66,86 @@ feature {NONE} -- main feature
 				end
 			end
 
-			print_on_io_game_state(number_player)
+			number_player:=0 --set the initial player(human): 0 human, 1 ai
 
+			from
+			until
+				full_board
+			loop
+				print_on_io_game_state(number_player)
+				if(number_player=0) then
+					print("E' il tuo turno.%NInserisci il numero della carta che vuoi inserire%N")
+					io.read_integer
+					read:=io.last_integer
+					temp_index_card:=read
+					print("Inserisci la posizione(x):")
+					io.read_integer
+					temp_x:=io.last_integer
+					print("Inserisci la posizione(y):")
+					io.read_integer
+					temp_y:=io.last_integer
+					create temp_position.make (temp_x, temp_y)
+					create temp_move.make (cards.at (temp_index_card), temp_position)
+					insert_catd_into_board(number_player, temp_move)
+					remove_card(number_player, temp_index_card)
+					number_player:=1
+				else
+					print("%N%N")
+					temp_move:= ai.make_a_move (temp_move.position, temp_move.card) --temp_move contains a move of the first player or it is void
+					insert_catd_into_board(number_player, temp_move)
+					cards_ai.prune(temp_move.card)
+					number_player:=0
+				end
+			end
+			print("La partita è conclusa.%N%N")
+			print_on_io_array(print_board())
 
 		end
 
 feature {ANY} --support feature
+	insert_catd_into_board(number_player: INTEGER; move:G21_MOVE)
+		local
+			cell: G21_CELL
+		do
+			create cell.make
+			cell.setcard (move.card)
+			cell.setplayernumber (number_player)
+			board[move.position.x,move.position.y] := cell
+		end
+
+	remove_card(number_player: INTEGER; index_card: INTEGER)
+		do
+			if(number_player=0) then
+					cards.prune (cards[index_card])
+				else
+					cards_ai.prune (cards[index_card])
+				end
+		end
+
+
+	full_board:BOOLEAN
+		local
+
+			i:INTEGER
+			j:INTEGER
+		do
+			from
+				i:= 1
+			until
+				i > 3
+			loop
+				from
+					j := 1
+				until
+					j > 3
+				loop
+					if(board[i,j].isoccupied=FALSE) then
+						result:=FALSE
+					end
+				end
+			end
+			result:=TRUE
+		end
 
 	make_board: ARRAY2[G21_CELL]
 		local
