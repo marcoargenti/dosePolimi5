@@ -15,7 +15,8 @@ create
 feature{NONE} -- Attributes
 			board: ARRAY2[G21_CELL]
 			ai: G21_AI
-			cards: ARRAYED_LIST[G21_CARD]
+			cards: ARRAYED_LIST[G21_CARD] --human cards
+			cards_ai: ARRAYED_LIST[G21_CARD]
 
 feature {NONE} -- main feature
 
@@ -27,6 +28,7 @@ feature {NONE} -- main feature
 			card:G21_CARD
 			str: ARRAY[STRING]
 			read:INTEGER
+			number_player: INTEGER
 		do
 			print ("Triple Triad!%N")
 
@@ -34,30 +36,34 @@ feature {NONE} -- main feature
 			create board.make_filled (void, 3, 3)
 			board:=make_board
 			cards:=make_deck
+			cards_ai:=cards.twin
+			print(cards.count)
 
 			from
 			until
 				ai/=void
 			loop
 				print ("Choose type of AI: insert 1 for easy, insert 2 for medium, insert 3 for hard%N")
-				read:=io.read_integer
-				if(read=3)
-				--	create temp_hard_ai.make (board, cards)
-					ai:=temp_hard_ai
+				io.read_integer
+				read:=io.last_integer
+
+				if(read=3) then
+				--	create temp_hard_ai.make (board, cards_ai)
+				--	ai:=temp_hard_ai
 				end
-				if(read=2)
-					create temp_medium_ai.make (board, cards)
+				if(read=2) then
+					create temp_medium_ai.make (board, cards_ai)
 					ai:=temp_medium_ai
 				end
-				if(read=1)
-					create temp_easy_ai.make (board, cards)
+				if(read=1) then
+					create temp_easy_ai.make (board, cards_ai)
 					ai:=temp_easy_ai
 				end
 			end
 
+			print_on_io_game_state(number_player)
 
 
-			
 		end
 
 feature {ANY} --support feature
@@ -74,18 +80,60 @@ feature {ANY} --support feature
 			until
 				i > 3
 			loop
-					from
-						j := 1
-					until
-						j > 3
-					loop
-						create cell.make
-						board.put(cell,i,j)
-						j := j + 1
-					end
+				from
+					j := 1
+				until
+					j > 3
+				loop
+					create cell.make
+					board.put(cell,i,j)
+					j := j + 1
+				end
 				i := i + 1
 			end
 			result:=board
+		end
+
+	print_on_io_game_state(number_player: INTEGER)
+		local
+			str:ARRAY[STRING]
+		do
+			str:=print_board()
+			print_on_io_array(str)
+
+			if(number_player=0) then
+				str:=print_cards(cards)
+			end
+			if(number_player=0) then
+				str:=print_cards(cards_ai)
+			end
+			print_on_io_array(str)
+		end
+
+	print_cards(cards_list: ARRAYED_LIST[G21_CARD]):ARRAY[STRING]
+		local
+			r: ARRAY[STRING]
+			str: ARRAY[STRING]
+			i: INTEGER
+			j:INTEGER
+		do
+			create r.make_filled ("", 1, 3*cards.count)
+			from
+				i:= 1
+			until
+				not cards_list.valid_index (i)
+			loop
+				from
+					j:= 1
+				until
+					not cards_list.valid_index (j)
+				loop
+					r[J+(i-1)*3]:=str[j].twin
+					j:=j+1
+				end
+				i := i + 1
+			end
+			result:=r
 		end
 
 	print_card(card: G21_CARD):ARRAY[STRING]
@@ -96,15 +144,16 @@ feature {ANY} --support feature
 		do
 			tab.make_from_string ("   ")
 			create r.make_filled ("|", 1, 3)
-			string:= tab
+			string:= tab.twin
 			string.append_string_general(card.top.to_hex_string)
 			string.append_string_general(tab)
 			r.put (string, 1)
-			string.copy(card.left.to_hex_string)
+
+			string:=(card.left.to_hex_string).twin
 			string.append_string_general(tab)
 			string.append_string_general(card.right.to_hex_string)
 			r.put (string, 2)
-			string:= tab
+			string:= tab.twin
 			string.append_string_general(card.bottom.to_hex_string)
 			string.append_string_general(tab)
 			r.put (string, 3)
@@ -117,38 +166,38 @@ feature {ANY} --support feature
 			r: ARRAY[STRING]
 			tab: STRING
 			space:STRING
+			err: INTEGER
 		do
-			if(cell.isoccupied) then
-				r:= print_card(cell.card)
-			else
-				tab.make_from_string ("   ")
-				space.make_from_string (" ")
+				create err
+				create r.make_filled ("|      ", 1, 3)
+				create tab.make_from_string("  ")
+				create space.make_from_string(" ")
+				if(cell.card/=void and then cell.card.bottom/=err) then
+					create string.make_empty
+					string:=tab.twin
+					string.append_string_general(cell.element.out)
+					string.append_string_general(space)
+					string.append_string_general(cell.card.top.to_hex_string)
+					string.append_string_general(tab)
+					r[1].copy (string)
+					string.copy(cell.card.left.to_hex_string)
+					string.append_string_general(space)
+					string.append_string_general(cell.getplayernumber.to_hex_string)
+					string.append_string_general(space)
+					string.append_string_general(cell.card.right.to_hex_string)
+					r[2].copy (string)
+					string:=tab
+					string.append_string_general(cell.card.bottom.to_hex_string)
+					string.append_string_general(tab)
+					r[3].copy (string)
+				end
 
-				create r.make_empty
-
-				string:= string
-				string.append_string_general(cell.element.out)
-				string.append_string_general(space)
-				string.append_string_general(cell.card.top.to_hex_string)
-				string.append_string_general(tab)
-				r[1].copy (string)
-				string.copy(cell.card.left.to_hex_string)
-				string.append_string_general(space)
-				string.append_string_general(cell.getplayernumber.to_hex_string)
-				string.append_string_general(space)
-				string.append_string_general(cell.card.right.to_hex_string)
-				r[2].copy (string)
-				string:=tab
-				string.append_string_general(cell.card.bottom.to_hex_string)
-				string.append_string_general(tab)
-				r[3].copy (string)
-			end
 
 			result:=r
 
 		end
 
-	print_array(str: ARRAY[STRING])
+	print_on_io_array(str: ARRAY[STRING])
 		local
 			i:INTEGER
 			index_array:INTEGER
@@ -157,9 +206,13 @@ feature {ANY} --support feature
 			from
 				i:= 1
 			until
-				i >index_array
+				not str.valid_index (i)
 			loop
 				print(str[i])
+				io.put_new_line
+				io.put_new_line
+				io.put_new_line
+				i:=i+1
 			end
 		end
 
@@ -172,7 +225,8 @@ feature {ANY} --support feature
 			j:INTEGER
 			k:INTEGER
 		do
-			create r.make_empty
+			create r.make_filled ("", 1, 9)
+			create temp.make_filled ("", 1, 3)
 
 			from
 				i:= 1
@@ -190,7 +244,8 @@ feature {ANY} --support feature
 						until
 							k > 3
 						loop
-							r[k+(i-1)*3].append (temp[k])
+							r[k+(i-1)*3].append(temp[k])
+							k:=k+1
 						end
 						j := j + 1
 					end

@@ -1,0 +1,38 @@
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY               put @3                 valid_index:                 
+<00000000022F1738>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+MAIN                print_cell @23                                      
+<00000000022F05A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                print_board @6                                      
+<00000000022F05A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                make @18                                            
+<00000000022F05A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                root's creation                                     
+<00000000022F05A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+dose_polimi5: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+MAIN                root's creation @10    Ctrl-Break:                  
+<0000000003720088>                         Operating system signal.      Exit
+-------------------------------------------------------------------------------
+MAIN                root's creation        Unexpected harmful signal (Segmentation violation):
+<0000000003720088>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
