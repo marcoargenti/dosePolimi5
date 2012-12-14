@@ -140,12 +140,12 @@ void egc_init_plug (void)
 	egc_forg_table = egc_forg_table_init;
 
 	egc_system_name = "dose_polimi5";
-	egc_system_location = "C:\\Users\\marco\\Documents\\GitHub\\dosePolimi5\\EIFGENs\\dose_polimi5\\W_code";
+	egc_system_location = "C:\\Users\\Emanuele\\Documents\\GitHub\\dosePolimi5\\EIFGENs\\dose_polimi5\\W_code";
 	egc_compiler_tag = 38;
-	egc_project_version = 1355418927;
+	egc_project_version = 1354187554;
 	egc_has_old_special_semantic = 0;
 	egc_has_ieee_semantic = 1;
-	scount = 879;
+	scount = 878;
 
 	egc_rcount = 1;
 	egc_ridx = 0;
@@ -157,7 +157,7 @@ void egc_init_plug (void)
 	egc_rlist[0] = "MAIN.make";
 	egc_rcdt[0] = 0;
 	egc_rcorigin[0] = 329;
-	egc_rcoffset[0] = 0;
+	egc_rcoffset[0] = 4;
 	egc_rcarg[0] = 0;
 	
 	
@@ -170,7 +170,7 @@ void egc_init_plug (void)
 void egc_rcdt_init (void)
 {
 	if (egc_rcdt[0] == 0) {
-		egc_rcdt[0] = 836; /* MAIN */
+		egc_rcdt[0] = 865; /* MAIN */
 	}
 }
 

@@ -4765,6 +4765,13 @@ char *names836 [] =
 "internal_name",
 };
 
+char *names837 [] =
+{
+"internal_item",
+"is_utc",
+"millisecond_now",
+};
+
 char *names838 [] =
 {
 "card",
@@ -4775,6 +4782,12 @@ char *names838 [] =
 
 char *names839 [] =
 {
+"x",
+"y",
+};
+
+char *names840 [] =
+{
 "cardname",
 "element",
 "right",
@@ -4783,37 +4796,10 @@ char *names839 [] =
 "bottom",
 };
 
-char *names840 [] =
-{
-"board",
-"cards",
-"valuated_moves",
-};
-
-char *names842 [] =
-{
-"board",
-"cards",
-"valuated_moves",
-};
-
-char *names843 [] =
-{
-"board",
-"cards",
-"free_positions",
-};
-
-char *names844 [] =
-{
-"board",
-"cards",
-};
-
 char *names845 [] =
 {
-"x",
-"y",
+"card",
+"position",
 };
 
 char *names846 [] =
@@ -4825,35 +4811,44 @@ char *names846 [] =
 
 char *names847 [] =
 {
-"card",
-"position",
+"board",
+"cards",
 };
 
 char *names848 [] =
 {
-"fake_board",
+"board",
+"cards",
+"free_positions",
 };
 
 char *names849 [] =
 {
-"internal_item",
-"is_utc",
-"millisecond_now",
+"board",
+"cards",
+"valuated_moves",
 };
 
-char *names856 [] =
+char *names850 [] =
+{
+"board",
+"cards",
+"valuated_moves",
+};
+
+char *names854 [] =
 {
 "compact_time",
 "fractional_second",
 };
 
-char *names859 [] =
+char *names858 [] =
 {
 "time",
 "date",
 };
 
-char *names862 [] =
+char *names860 [] =
 {
 "value",
 "name",
@@ -4866,14 +4861,7 @@ char *names862 [] =
 "type",
 };
 
-char *names864 [] =
-{
-"origin_date_time",
-"time",
-"date",
-};
-
-char *names865 [] =
+char *names862 [] =
 {
 "origin_date",
 "year",
@@ -4881,11 +4869,31 @@ char *names865 [] =
 "day",
 };
 
-char *names866 [] =
+char *names863 [] =
+{
+"origin_date_time",
+"time",
+"date",
+};
+
+char *names864 [] =
 {
 "minute",
 "hour",
 "fine_second",
+};
+
+char *names866 [] =
+{
+"board",
+"ai",
+"cards",
+"cards_ai",
+};
+
+char *names867 [] =
+{
+"ordered_compact_date",
 };
 
 char *names868 [] =
@@ -4898,12 +4906,7 @@ char *names869 [] =
 "ordered_compact_date",
 };
 
-char *names870 [] =
-{
-"ordered_compact_date",
-};
-
-char *names872 [] =
+char *names871 [] =
 {
 "value",
 "days",
@@ -4912,6 +4915,12 @@ char *names872 [] =
 "separators_used",
 "right_day_text",
 "base_century",
+};
+
+char *names872 [] =
+{
+"compact_time",
+"fractional_second",
 };
 
 char *names873 [] =
@@ -4923,26 +4932,11 @@ char *names873 [] =
 char *names874 [] =
 {
 "compact_time",
+"ordered_compact_date",
 "fractional_second",
 };
 
 char *names875 [] =
-{
-"compact_time",
-"ordered_compact_date",
-"fractional_second",
-};
-
-char *names876 [] =
-{
-"time",
-"date",
-"compact_time",
-"ordered_compact_date",
-"fractional_second",
-};
-
-char *names877 [] =
 {
 "source_string",
 "day_text_val",
@@ -4962,13 +4956,16 @@ char *names877 [] =
 "fine_second_val",
 };
 
-char *names878 [] =
+char *names876 [] =
 {
-"start_bound",
-"end_bound",
+"time",
+"date",
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
 };
 
-char *names879 [] =
+char *names877 [] =
 {
 "area",
 "object_comparison",
@@ -4976,6 +4973,12 @@ char *names879 [] =
 "upper",
 "height",
 "width",
+};
+
+char *names878 [] =
+{
+"start_bound",
+"end_bound",
 };
 
 

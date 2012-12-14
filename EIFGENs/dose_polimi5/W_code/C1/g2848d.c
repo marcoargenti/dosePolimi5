@@ -1,5 +1,5 @@
 /*
- * Class G21_FAKE_BOARD
+ * Class G21_EASY_AI
  */
 
 #include "eif_macros.h"
@@ -13,7 +13,9 @@ static EIF_TYPE_INDEX gen_type0_848 [] = {0,218,847,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_848 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_848 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_848 [] = {0,0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_848 [] = {0,878,837,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_848 [] = {0,876,837,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_848 [] = {0,240,839,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_848 [] = {0,240,838,0xFFFF};
 
 
 static struct desc_info desc_848[] = {
@@ -49,13 +51,24 @@ static struct desc_info desc_848[] = {
 	{28, (BODY_INDEX)-1, 847, NULL},
 	{29, (BODY_INDEX)-1, 196, NULL},
 	{30, (BODY_INDEX)-1, 847, NULL},
-	{11821, 0, 878, gen_type4_848},
-	{11822, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11823, (BODY_INDEX)-1, 172, NULL},
-	{11824, (BODY_INDEX)-1, 172, NULL},
-	{11825, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11826, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11827, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{11838, 0, 876, gen_type4_848},
+	{11839, 8, 240, gen_type5_848},
+	{11844, (BODY_INDEX)-1, 844, NULL},
+	{11840, (BODY_INDEX)-1, 172, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
+	{11842, 16, 240, gen_type6_848},
+	{11843, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11845, (BODY_INDEX)-1, 839, NULL},
+	{11846, (BODY_INDEX)-1, 838, NULL},
+	{11847, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init848(void);
@@ -63,7 +76,8 @@ void Init848(void)
 {
 	IDSC(desc_848, 0, 847);
 	IDSC(desc_848 + 1, 1, 847);
-	IDSC(desc_848 + 32, 330, 847);
+	IDSC(desc_848 + 32, 334, 847);
+	IDSC(desc_848 + 40, 330, 847);
 }
 
 

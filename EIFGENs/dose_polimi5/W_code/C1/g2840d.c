@@ -1,5 +1,5 @@
 /*
- * Class G21_NOT_EASY_AI
+ * Class G21_CARD
  */
 
 #include "eif_macros.h"
@@ -13,13 +13,10 @@ static EIF_TYPE_INDEX gen_type0_840 [] = {0,218,839,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_840 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_840 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_840 [] = {0,0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_840 [] = {0,878,837,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_840 [] = {0,240,838,0xFFFF};
-static EIF_TYPE_INDEX gen_type6_840 [] = {0,240,845,0xFFFF};
 
 
 static struct desc_info desc_840[] = {
-	{(BODY_INDEX) 11981, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) -1, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 201, NULL},
 	{1, (BODY_INDEX)-1, 218, gen_type0_840},
 	{2, (BODY_INDEX)-1, 172, NULL},
@@ -51,20 +48,25 @@ static struct desc_info desc_840[] = {
 	{28, (BODY_INDEX)-1, 839, NULL},
 	{29, (BODY_INDEX)-1, 196, NULL},
 	{30, (BODY_INDEX)-1, 839, NULL},
-	{11962, 0, 878, gen_type4_840},
-	{11963, 8, 240, gen_type5_840},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 846, NULL},
-	{11964, (BODY_INDEX)-1, 172, NULL},
-	{11972, 16, 240, gen_type6_840},
-	{11973, (BODY_INDEX)-1, 187, NULL},
-	{11974, (BODY_INDEX)-1, 187, NULL},
-	{11975, (BODY_INDEX)-1, 187, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11976, (BODY_INDEX)-1, 187, NULL},
-	{11977, (BODY_INDEX)-1, 846, NULL},
-	{11978, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11979, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11980, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11818, 12, 187, NULL},
+	{11819, 16, 187, NULL},
+	{11801, 20, 187, NULL},
+	{11802, 24, 187, NULL},
+	{11803, 8, 166, NULL},
+	{11804, 0, 201, NULL},
+	{11805, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11806, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11807, (BODY_INDEX)-1, 166, NULL},
+	{11808, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11809, (BODY_INDEX)-1, 187, NULL},
+	{11810, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11811, (BODY_INDEX)-1, 187, NULL},
+	{11812, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11813, (BODY_INDEX)-1, 187, NULL},
+	{11814, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11815, (BODY_INDEX)-1, 187, NULL},
+	{11816, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11817, (BODY_INDEX)-1, 201, NULL},
 };
 
 extern void Init840(void);
@@ -72,8 +74,7 @@ void Init840(void)
 {
 	IDSC(desc_840, 0, 839);
 	IDSC(desc_840 + 1, 1, 839);
-	IDSC(desc_840 + 32, 334, 839);
-	IDSC(desc_840 + 36, 338, 839);
+	IDSC(desc_840 + 32, 335, 839);
 }
 
 

@@ -1,5 +1,5 @@
 /*
- * Class G21_MOVE
+ * Class G21_AI
  */
 
 #include "eif_macros.h"
@@ -13,10 +13,12 @@ static EIF_TYPE_INDEX gen_type0_847 [] = {0,218,846,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_847 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_847 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_847 [] = {0,0,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_847 [] = {0,876,837,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_847 [] = {0,240,839,0xFFFF};
 
 
 static struct desc_info desc_847[] = {
-	{(BODY_INDEX) 11833, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 11841, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 201, NULL},
 	{1, (BODY_INDEX)-1, 218, gen_type0_847},
 	{2, (BODY_INDEX)-1, 172, NULL},
@@ -52,12 +54,10 @@ static struct desc_info desc_847[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, INVALID_DTYPE, NULL},
-	{11828, 0, 838, NULL},
-	{11829, 8, 844, NULL},
-	{11830, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11831, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11832, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11838, 0, 876, gen_type4_847},
+	{11839, 8, 240, gen_type5_847},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 844, NULL},
+	{11840, (BODY_INDEX)-1, 172, NULL},
 };
 
 extern void Init847(void);
@@ -65,7 +65,7 @@ void Init847(void)
 {
 	IDSC(desc_847, 0, 846);
 	IDSC(desc_847 + 1, 1, 846);
-	IDSC(desc_847 + 32, 331, 846);
+	IDSC(desc_847 + 32, 334, 846);
 }
 
 

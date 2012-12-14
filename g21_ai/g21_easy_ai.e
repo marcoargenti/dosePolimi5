@@ -51,7 +51,7 @@ feature{G21_BOARD} -- Creation
 
 feature{G21_BOARD, TEST_G21_EASY_AI_MAKE_A_MOVE} -- Procedures
 
-	make_a_move (card_position: G21_POINT; player_card: G21_CARD): G21_MOVE -- It redefines G21_AI feature. It makes an easy difficult level move
+	make_a_move (card_position: G21_POINT): G21_MOVE -- It redefines G21_AI feature. It makes an easy difficult level move
 
 		--require
 

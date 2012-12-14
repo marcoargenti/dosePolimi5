@@ -66,14 +66,14 @@ feature {NONE} -- main feature
 				end
 			end
 
-			number_player:=0 --set the initial player(human): 0 human, 1 ai
+			number_player:=1 --set the initial player(human): 1 human, 2 ai
 
 			from
 			until
-				full_board
+				not full_board
 			loop
 				print_on_io_game_state(number_player)
-				if(number_player=0) then
+				if(number_player=1) then
 					print("E' il tuo turno.%NInserisci il numero della carta che vuoi inserire%N")
 					io.read_integer
 					read:=io.last_integer
@@ -88,13 +88,13 @@ feature {NONE} -- main feature
 					create temp_move.make (cards.at (temp_index_card), temp_position)
 					insert_catd_into_board(number_player, temp_move)
 					remove_card(number_player, temp_index_card)
-					number_player:=1
+					number_player:=2
 				else
 					print("%N%N")
-					temp_move:= ai.make_a_move (temp_move.position, temp_move.card) --temp_move contains a move of the first player or it is void
+					temp_move:= ai.make_a_move (temp_move.position) --temp_move contains a move of the first player or it is void
 					insert_catd_into_board(number_player, temp_move)
 					cards_ai.prune(temp_move.card)
-					number_player:=0
+					number_player:=1
 				end
 			end
 			print("La partita è conclusa.%N%N")
@@ -115,10 +115,10 @@ feature {ANY} --support feature
 
 	remove_card(number_player: INTEGER; index_card: INTEGER)
 		do
-			if(number_player=0) then
+			if(number_player=1) then
 					cards.prune (cards[index_card])
 				else
-					cards_ai.prune (cards[index_card])
+					cards_ai.prune (cards_ai[index_card])
 				end
 		end
 
@@ -142,7 +142,9 @@ feature {ANY} --support feature
 					if(board[i,j].isoccupied=FALSE) then
 						result:=FALSE
 					end
+					j:=j+1
 				end
+				i:=i+1
 			end
 			result:=TRUE
 		end
@@ -179,11 +181,10 @@ feature {ANY} --support feature
 		do
 			str:=print_board()
 			print_on_io_array(str)
-
-			if(number_player=0) then
+			if(number_player=1) then
+				print("DA QUI IN POI IL PROGETTO SI BLOCCA")
 				str:=print_cards(cards)
-			end
-			if(number_player=0) then
+			else
 				str:=print_cards(cards_ai)
 			end
 			print_on_io_array(str)

@@ -41,11 +41,10 @@ SYSTEM_IN_DYNAMIC_LIB = dose_polimi5.dll
 
 OBJECTS = big_file_C2_c.obj 
 
-OLDOBJECTS =  ar879.obj ar879d.obj ti874.obj ti874d.obj ti874f.obj da872.obj da872d.obj \
-	da872f.obj ti873.obj ti873d.obj ti873f.obj da870.obj da870d.obj da870f.obj da877.obj \
-	da877d.obj da877f.obj da876.obj da876d.obj da876f.obj fi871.obj fi871d.obj fi871f.obj \
-	in878.obj in878d.obj in878f.obj da869.obj da869d.obj da869f.obj da875.obj da875d.obj \
-	da875f.obj 
+OLDOBJECTS =  ar877.obj ar877d.obj ti873.obj ti873d.obj ti873f.obj da871.obj da871d.obj \
+	da871f.obj ti872.obj ti872d.obj ti872f.obj da876.obj da876d.obj da876f.obj da875.obj \
+	da875d.obj da875f.obj da869.obj da869d.obj da869f.obj fi870.obj fi870d.obj fi870f.obj \
+	in878.obj in878d.obj in878f.obj da874.obj da874d.obj da874f.obj 
 
 all::  Cobj2.lib
 

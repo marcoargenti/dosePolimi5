@@ -15,12 +15,12 @@
 				<exclude>/CVS$</exclude>
 				<exclude>/.svn$</exclude>
 			</file_rule>
-			<cluster name="g21_ai" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\">
-				<cluster name="g21_point" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\g21_point\"/>
-				<cluster name="g21_move" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\g21_move\"/>
-				<cluster name="g21_fake_board" location="c:\users\marco\documents\github\dosepolimi5\g21_ai\g21_fake_board\"/>
+			<cluster name="g21_ai" location=".\g21_ai\">
+				<cluster name="g21_point" location=".\g21_ai\g21_point\"/>
+				<cluster name="g21_move" location=".\g21_ai\g21_move\"/>
+				<cluster name="g21_fake_board" location=".\g21_ai\g21_fake_board\"/>
 			</cluster>
-			<cluster name="g21_logic" location="c:\users\marco\documents\github\dosepolimi5\g21_logic\"/>
+			<cluster name="g21_logic" location=".\g21_logic\"/>
 		</cluster>
 	</target>
 </system>

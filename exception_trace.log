@@ -36,3 +36,79 @@ MAIN                root's creation @10    Ctrl-Break:
 MAIN                root's creation        Unexpected harmful signal (Segmentation violation):
 <0000000003720088>                         Eiffel run-time panic.        Bye
 -------------------------------------------------------------------------------
+
+dose_polimi5: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              item @5                Ctrl-Break:                  
+<00000000021B08E8>  (From ARRAY)           Operating system signal.      Fail
+-------------------------------------------------------------------------------
+ARRAY2              item @4                valid_key:                   
+<00000000021B08E8>  (From ARRAY)           Precondition violated.        Fail
+-------------------------------------------------------------------------------
+ARRAY2              item @4                                             
+<00000000021B08E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+STRING_8            set_count @5                                        
+<00000000021B15C8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                full_board @5                                       
+<00000000021B0588>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                make @20                                            
+<00000000021B0588>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                root's creation                                     
+<00000000021B0588>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+MAIN                root's creation        Unexpected harmful signal (Segmentation violation):
+<00000000021B0588>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+dose_polimi5: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+MAIN                root's creation @4     Ctrl-Break:                  
+<00000000021A0588>                         Operating system signal.      Exit
+-------------------------------------------------------------------------------
+MAIN                root's creation        Unexpected harmful signal (Segmentation violation):
+<00000000021A0588>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+dose_polimi5: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+MAIN                root's creation        Unexpected harmful signal (Segmentation violation):
+<00000000021105A8>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+dose_polimi5: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+MAIN                root's creation        Unexpected harmful signal (Segmentation violation):
+<00000000022005A8>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
