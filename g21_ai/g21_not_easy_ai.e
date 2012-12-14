@@ -206,7 +206,7 @@ feature{G21_NOT_EASY_AI} -- Procedures
 
 			result_not_void:result/=void
 			card_valid: result.card/=void
-			result_in_list: cards.has(result.card) = true
+			result_in_list: cards.index_of(result.card,1)/=0
 			valid_position: result.position.x>=1 and then result.position.x<=3 and then result.position.y>=1 and then result.position.y<=3
 
 		end

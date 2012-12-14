@@ -80,7 +80,7 @@ void Init837(void)
 {
 	IDSC(desc_837, 0, 836);
 	IDSC(desc_837 + 1, 1, 836);
-	IDSC(desc_837 + 32, 342, 836);
+	IDSC(desc_837 + 32, 341, 836);
 }
 
 

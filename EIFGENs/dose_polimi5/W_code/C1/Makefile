@@ -41,18 +41,18 @@ SYSTEM_IN_DYNAMIC_LIB = dose_polimi5.dll
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  ma866.obj ma866d.obj ma866f.obj g2848.obj g2848d.obj g2848f.obj g2850.obj \
-	g2850d.obj g2850f.obj g2841.obj g2841d.obj g2841f.obj g2845.obj g2845d.obj g2845f.obj \
-	g2847.obj g2847d.obj g2847f.obj g2840.obj g2840d.obj g2840f.obj g2839.obj g2839d.obj \
-	g2839f.obj g2838.obj g2838d.obj g2838f.obj g2846.obj g2846d.obj g2846f.obj g2849.obj \
-	g2849d.obj g2849f.obj ti864.obj ti864d.obj ti864f.obj c_837.obj c_837d.obj c_837f.obj \
-	ab865.obj ab865d.obj ab865f.obj ti854.obj ti854d.obj ti854f.obj du861.obj du861d.obj \
-	du861f.obj ti853.obj ti853d.obj ti853f.obj da860.obj da860d.obj da860f.obj da855.obj \
-	da855d.obj da855f.obj ti852.obj ti852d.obj ti852f.obj gr844.obj gr844d.obj gr844f.obj \
-	da863.obj da863d.obj da863f.obj da862.obj da862d.obj da862f.obj da858.obj da858d.obj \
-	da858f.obj co859.obj co859d.obj co859f.obj ti851.obj ti851d.obj ti851f.obj da867.obj \
-	da867d.obj da867f.obj da868.obj da868d.obj da868f.obj da857.obj da857d.obj da857f.obj \
-	da856.obj da856d.obj da856f.obj da843.obj da843d.obj da843f.obj da842.obj da842d.obj \
+OLDOBJECTS =  ma866.obj ma866d.obj ma866f.obj g2858.obj g2858d.obj g2858f.obj g2860.obj \
+	g2860d.obj g2860f.obj g2841.obj g2841d.obj g2841f.obj g2845.obj g2845d.obj g2845f.obj \
+	g2857.obj g2857d.obj g2857f.obj g2840.obj g2840d.obj g2840f.obj g2839.obj g2839d.obj \
+	g2839f.obj g2838.obj g2838d.obj g2838f.obj g2846.obj g2846d.obj g2846f.obj g2859.obj \
+	g2859d.obj g2859f.obj c_837.obj c_837d.obj c_837f.obj ti864.obj ti864d.obj ti864f.obj \
+	ab865.obj ab865d.obj ab865f.obj ti852.obj ti852d.obj ti852f.obj da853.obj da853d.obj \
+	da853f.obj da848.obj da848d.obj da848f.obj du861.obj du861d.obj du861f.obj ti851.obj \
+	ti851d.obj ti851f.obj ti850.obj ti850d.obj ti850f.obj ti849.obj ti849d.obj ti849f.obj \
+	co847.obj co847d.obj co847f.obj da863.obj da863d.obj da863f.obj da862.obj da862d.obj \
+	da862f.obj da855.obj da855d.obj da855f.obj da867.obj da867d.obj da867f.obj da868.obj \
+	da868d.obj da868f.obj gr844.obj gr844d.obj gr844f.obj da843.obj da843d.obj da843f.obj \
+	da856.obj da856d.obj da856f.obj da854.obj da854d.obj da854f.obj da842.obj da842d.obj \
 	da842f.obj 
 
 all::  Cobj1.lib

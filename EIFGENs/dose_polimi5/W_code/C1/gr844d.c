@@ -60,7 +60,7 @@ void Init844(void)
 {
 	IDSC(desc_844, 0, 843);
 	IDSC(desc_844 + 1, 1, 843);
-	IDSC(desc_844 + 32, 357, 843);
+	IDSC(desc_844 + 32, 365, 843);
 }
 
 

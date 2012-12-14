@@ -4809,46 +4809,7 @@ char *names846 [] =
 "value",
 };
 
-char *names847 [] =
-{
-"board",
-"cards",
-};
-
 char *names848 [] =
-{
-"board",
-"cards",
-"free_positions",
-};
-
-char *names849 [] =
-{
-"board",
-"cards",
-"valuated_moves",
-};
-
-char *names850 [] =
-{
-"board",
-"cards",
-"valuated_moves",
-};
-
-char *names854 [] =
-{
-"compact_time",
-"fractional_second",
-};
-
-char *names858 [] =
-{
-"time",
-"date",
-};
-
-char *names860 [] =
 {
 "value",
 "name",
@@ -4861,19 +4822,58 @@ char *names860 [] =
 "type",
 };
 
+char *names852 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names855 [] =
+{
+"time",
+"date",
+};
+
+char *names857 [] =
+{
+"board",
+"cards",
+};
+
+char *names858 [] =
+{
+"board",
+"cards",
+"free_positions",
+};
+
+char *names859 [] =
+{
+"board",
+"cards",
+"valuated_moves",
+};
+
+char *names860 [] =
+{
+"board",
+"cards",
+"valuated_moves",
+};
+
 char *names862 [] =
+{
+"origin_date_time",
+"time",
+"date",
+};
+
+char *names863 [] =
 {
 "origin_date",
 "year",
 "month",
 "day",
-};
-
-char *names863 [] =
-{
-"origin_date_time",
-"time",
-"date",
 };
 
 char *names864 [] =
@@ -4938,6 +4938,15 @@ char *names874 [] =
 
 char *names875 [] =
 {
+"time",
+"date",
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
+};
+
+char *names876 [] =
+{
 "source_string",
 "day_text_val",
 "code",
@@ -4954,15 +4963,6 @@ char *names875 [] =
 "base_century",
 "fractional_second",
 "fine_second_val",
-};
-
-char *names876 [] =
-{
-"time",
-"date",
-"compact_time",
-"ordered_compact_date",
-"fractional_second",
 };
 
 char *names877 [] =

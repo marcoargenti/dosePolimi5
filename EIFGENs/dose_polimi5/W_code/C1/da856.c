@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F856_6677(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F856_6750(EIF_REFERENCE);
 extern void EIF_Minit856(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {DATE_MEASUREMENT}.days_in_month */
-EIF_TYPED_VALUE F856_6677 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F856_6750 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "days_in_month";
@@ -56,12 +56,12 @@ EIF_TYPED_VALUE F856_6677 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 855, Current, 0, 0, 11904);
+	RTEAA(l_feature_name, 855, Current, 0, 0, 11953);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(855, Current, 11904);
+	RTDBGEAA(855, Current, 11953);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */

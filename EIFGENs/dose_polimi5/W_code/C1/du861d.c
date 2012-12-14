@@ -68,8 +68,8 @@ void Init861(void)
 	IDSC(desc_861, 0, 860);
 	IDSC(desc_861 + 1, 1, 860);
 	IDSC(desc_861 + 32, 198, 860);
-	IDSC(desc_861 + 36, 347, 860);
-	IDSC(desc_861 + 39, 357, 860);
+	IDSC(desc_861 + 36, 353, 860);
+	IDSC(desc_861 + 39, 365, 860);
 }
 
 

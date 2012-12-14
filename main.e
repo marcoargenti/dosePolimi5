@@ -111,6 +111,10 @@ feature {ANY} --support feature
 			cell.setcard (move.card)
 			cell.setplayernumber (number_player)
 			board[move.position.x,move.position.y] := cell
+			print(board[move.position.x,move.position.y].isoccupied)
+			print(board[move.position.x,move.position.y+1].isoccupied)
+			print(board[move.position.x+1,move.position.y].isoccupied)
+			print(board[move.position.x,move.position.y+1].isoccupied)
 		end
 
 	remove_card(number_player: INTEGER; index_card: INTEGER)
@@ -182,7 +186,6 @@ feature {ANY} --support feature
 			str:=print_board()
 			print_on_io_array(str)
 			if(number_player=1) then
-				print("DA QUI IN POI IL PROGETTO SI BLOCCA")
 				str:=print_cards(cards)
 			else
 				str:=print_cards(cards_ai)
@@ -197,7 +200,7 @@ feature {ANY} --support feature
 			i: INTEGER
 			j:INTEGER
 		do
-			create r.make_filled ("", 1, 3*cards.count)
+			create r.make_filled ("", 1, (3*cards_list.count + 1))
 			from
 				i:= 1
 			until
@@ -206,9 +209,10 @@ feature {ANY} --support feature
 				from
 					j:= 1
 				until
-					not cards_list.valid_index (j)
+					j>3
 				loop
-					r[J+(i-1)*3]:=str[j].twin
+					str:=print_card(cards_list[i])
+					r[j+(i-1)*3]:=str[j].twin
 					j:=j+1
 				end
 				i := i + 1
@@ -221,20 +225,28 @@ feature {ANY} --support feature
 			string: STRING
 			r: ARRAY[STRING]
 			tab: STRING
+			temp: STRING
 		do
-			tab.make_from_string ("   ")
+			create tab.make_from_string ("   ")
 			create r.make_filled ("|", 1, 3)
 			string:= tab.twin
-			string.append_string_general(card.top.to_hex_string)
+			temp:=card.top.to_hex_string
+			temp.remove_substring (1, 7)
+			string.append_string_general(temp)
 			string.append_string_general(tab)
 			r.put (string, 1)
-
-			string:=(card.left.to_hex_string).twin
+			temp:=card.left.to_hex_string
+			temp.remove_substring (1, 7)
+			string:=(temp).twin
 			string.append_string_general(tab)
-			string.append_string_general(card.right.to_hex_string)
+			temp:=card.right.to_hex_string
+			temp.remove_substring (1, 7)
+			string.append_string_general(temp)
 			r.put (string, 2)
 			string:= tab.twin
-			string.append_string_general(card.bottom.to_hex_string)
+			temp:=card.bottom.to_hex_string
+			temp.remove_substring (1, 7)
+			string.append_string_general(temp)
 			string.append_string_general(tab)
 			r.put (string, 3)
 			result:=r
@@ -242,6 +254,7 @@ feature {ANY} --support feature
 
 	print_cell(cell: G21_CELL): ARRAY[STRING]
 		local
+			temp:STRING
 			string: STRING
 			r: ARRAY[STRING]
 			tab: STRING
@@ -249,27 +262,42 @@ feature {ANY} --support feature
 			err: INTEGER
 		do
 				create err
-				create r.make_filled ("|      ", 1, 3)
-				create tab.make_from_string("  ")
-				create space.make_from_string(" ")
+				create r.make_filled ("|bbbbbb", 1, 3)
+				create tab.make_from_string("tt")
+				create space.make_from_string("s")
 				if(cell.card/=void and then cell.card.bottom/=err) then
 					create string.make_empty
 					string:=tab.twin
 					string.append_string_general(cell.element.out)
 					string.append_string_general(space)
-					string.append_string_general(cell.card.top.to_hex_string)
+
+					temp:=cell.card.top.to_hex_string
+					temp.remove_substring (1, 7)
+					string.append_string_general(temp)
 					string.append_string_general(tab)
-					r[1].copy (string)
-					string.copy(cell.card.left.to_hex_string)
+					r[1]:=string.twin
+
+					string:=""
+					temp:=cell.card.left.to_hex_string
+					temp.remove_substring (1, 7)
+					string:=temp.twin
 					string.append_string_general(space)
-					string.append_string_general(cell.getplayernumber.to_hex_string)
+					temp:=cell.getplayernumber.to_hex_string
+					temp.remove_substring (1, 7)
+					string.append_string_general(temp)
 					string.append_string_general(space)
-					string.append_string_general(cell.card.right.to_hex_string)
-					r[2].copy (string)
-					string:=tab
-					string.append_string_general(cell.card.bottom.to_hex_string)
+					temp:=cell.card.right.to_hex_string
+					temp.remove_substring (1, 7)
+					string.append_string_general(temp)
+					r[2]:=string.twin
+
+					string:=""
+					string:=tab.twin
+					temp:=cell.card.bottom.to_hex_string
+					temp.remove_substring (1, 7)
+					string.append_string_general(temp)
 					string.append_string_general(tab)
-					r[3].copy (string)
+					r[3]:=string.twin
 				end
 
 
@@ -280,9 +308,7 @@ feature {ANY} --support feature
 	print_on_io_array(str: ARRAY[STRING])
 		local
 			i:INTEGER
-			index_array:INTEGER
 		do
-			index_array:=str.count
 			from
 				i:= 1
 			until
@@ -318,7 +344,8 @@ feature {ANY} --support feature
 					until
 						j > 3
 					loop
-						temp:= print_cell(board[i,j])
+						temp:= print_cell(board.item (i, j))
+
 						from
 							k:= 1
 						until

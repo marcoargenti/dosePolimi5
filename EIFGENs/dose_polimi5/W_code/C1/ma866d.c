@@ -86,7 +86,7 @@ static struct desc_info desc_866[] = {
 	{1719, (BODY_INDEX)-1, 222, gen_type6_866},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 201, gen_type7_866},
 	{12111, 0, 876, gen_type8_866},
-	{12112, 8, 846, NULL},
+	{12112, 8, 856, NULL},
 	{12113, 16, 240, gen_type9_866},
 	{12114, 24, 240, gen_type10_866},
 	{12115, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},

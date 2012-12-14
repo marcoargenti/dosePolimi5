@@ -36,6 +36,7 @@ feature{G21_BOARD} -- Creation
 
 			board:=game_board
 			cards:=ai_cards
+			create free_positions.make (3*3)
 
 		ensure
 
@@ -60,8 +61,9 @@ feature{G21_BOARD, TEST_G21_EASY_AI_MAKE_A_MOVE} -- Procedures
 			move: G21_MOVE
 
 		do
-
+			print("qui si blocca")
 			create move.make(random_card, random_position)
+			print("make move finished")
 			result:= move.twin
 
 		--ensure
@@ -83,7 +85,7 @@ feature{NONE} -- Procedures
       		random_sequence: RANDOM
       		l_time: TIME
       		l_seed: INTEGER
-
+			temp:INTEGER
     	do
 
       		create l_time.make_now
@@ -93,7 +95,8 @@ feature{NONE} -- Procedures
       		l_seed := l_seed * 1000 + l_time.milli_second
       		create random_sequence.set_seed (l_seed)
       		random_sequence.forth
-			result:= cards.at (random_sequence.item\\cards.count)
+			temp:=random_sequence.item\\cards.count
+			result:= cards.at (temp)
 			cards.start
 
 

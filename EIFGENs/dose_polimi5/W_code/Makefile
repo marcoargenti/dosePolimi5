@@ -123,7 +123,7 @@ C_OBJECTS = C2\Cobj2.lib C1\Cobj1.lib
 
 EOBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  
 
-PRECOMP_OBJECTS= "c:\users\emanuele\documents\eiffel user files\7.1\precomp\spec\win64\EIFGENs\base\W_code\msc\precomp.lib"
+PRECOMP_OBJECTS= "c:\users\marco\documents\eiffel user files\7.1\precomp\spec\win64\EIFGENs\base\W_code\msc\precomp.lib"
 
 
 dose_polimi5.exe: dose_polimi5.lnk dose_polimi5.res
