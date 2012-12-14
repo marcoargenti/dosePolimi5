@@ -26,6 +26,7 @@ feature {NONE} -- main feature
 			temp_hard_ai: G21_HARD_AI
 			card:G21_CARD
 			str: ARRAY[STRING]
+			read:INTEGER
 		do
 			print ("Triple Triad!%N")
 
@@ -33,9 +34,30 @@ feature {NONE} -- main feature
 			create board.make_filled (void, 3, 3)
 			board:=make_board
 			cards:=make_deck
+
+			from
+			until
+				ai/=void
+			loop
+				print ("Choose type of AI: insert 1 for easy, insert 2 for medium, insert 3 for hard%N")
+				read:=io.read_integer
+				if(read=3)
+				--	create temp_hard_ai.make (board, cards)
+					ai:=temp_hard_ai
+				end
+				if(read=2)
+					create temp_medium_ai.make (board, cards)
+					ai:=temp_medium_ai
+				end
+				if(read=1)
+					create temp_easy_ai.make (board, cards)
+					ai:=temp_easy_ai
+				end
+			end
+
+
+
 			
-			create temp_ai.make (board, cards)
-			ai:=temp_ai
 		end
 
 feature {ANY} --support feature
@@ -45,7 +67,6 @@ feature {ANY} --support feature
 			i:INTEGER
 			j:INTEGER
 			cell:G21_CELL
-			board: ARRAY2[G21_CELL]
 		do
 			create board.make_filled (void,3,3)
 			from
@@ -142,7 +163,7 @@ feature {ANY} --support feature
 			end
 		end
 
-	print_board(board: ARRAY2[G21_CELL]):ARRAY[STRING]
+	print_board:ARRAY[STRING]
 		local
 			string: STRING
 			r: ARRAY[STRING]
@@ -186,7 +207,6 @@ feature {ANY} --support feature
 			card3:G21_CARD
 			card4:G21_CARD
 			card5:G21_CARD
-			cards: ARRAYED_LIST[G21_CARD]
 		do
 			create cards.make(0)
 
@@ -239,7 +259,7 @@ feature {ANY} --support feature
 			result:=cards
 		end
 
-	flip_card(position: G21_POINT; card:G21_CARD; board: ARRAY2[G21_CELL];number: INTEGER)--position where i have placed the card. it flip the close cards according to the flip rule
+	flip_card(position: G21_POINT; card:G21_CARD;number: INTEGER)--position where i have placed the card. it flip the close cards according to the flip rule
 		local
 			row: INTEGER
 			column: INTEGER
@@ -281,12 +301,12 @@ feature {ANY} --support feature
 
 		end
 
-	make_move(board: ARRAY2[G21_CELL]; move: G21_MOVE; player_number: INTEGER)
+	make_move(move: G21_MOVE; player_number: INTEGER)
 		local
 		do
 			board.item(move.position.x,move.position.y).setcard(move.card)
 			board.item(move.position.x,move.position.y).setplayernumber (player_number)
-			flip_card(move.position, move.card, board, player_number)
+			flip_card(move.position, move.card, player_number)
 		end
 
 end
