@@ -111,10 +111,6 @@ feature {ANY} --support feature
 			cell.setcard (move.card)
 			cell.setplayernumber (number_player)
 			board[move.position.x,move.position.y] := cell
-			print(board[move.position.x,move.position.y].isoccupied)
-			print(board[move.position.x,move.position.y+1].isoccupied)
-			print(board[move.position.x+1,move.position.y].isoccupied)
-			print(board[move.position.x,move.position.y+1].isoccupied)
 		end
 
 	remove_card(number_player: INTEGER; index_card: INTEGER)
