@@ -116,8 +116,8 @@ void Init856(void)
 {
 	IDSC(desc_856, 0, 855);
 	IDSC(desc_856 + 1, 1, 855);
-	IDSC(desc_856 + 32, 358, 855);
-	IDSC(desc_856 + 58, 348, 855);
+	IDSC(desc_856 + 32, 357, 855);
+	IDSC(desc_856 + 58, 347, 855);
 }
 
 

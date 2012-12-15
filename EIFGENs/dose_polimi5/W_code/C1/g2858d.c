@@ -14,8 +14,8 @@ static EIF_TYPE_INDEX gen_type1_858 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_858 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_858 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type4_858 [] = {0,876,837,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_858 [] = {0,240,839,0xFFFF};
-static EIF_TYPE_INDEX gen_type6_858 [] = {0,240,838,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_858 [] = {0,240,838,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_858 [] = {0,240,839,0xFFFF};
 
 
 static struct desc_info desc_858[] = {
@@ -57,8 +57,8 @@ static struct desc_info desc_858[] = {
 	{11956, (BODY_INDEX)-1, 172, NULL},
 	{11961, 16, 240, gen_type6_858},
 	{11962, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11958, (BODY_INDEX)-1, 839, NULL},
-	{11959, (BODY_INDEX)-1, 838, NULL},
+	{11958, (BODY_INDEX)-1, 838, NULL},
+	{11959, (BODY_INDEX)-1, 839, NULL},
 	{11960, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
@@ -67,7 +67,7 @@ void Init858(void)
 {
 	IDSC(desc_858, 0, 857);
 	IDSC(desc_858 + 1, 1, 857);
-	IDSC(desc_858 + 32, 334, 857);
+	IDSC(desc_858 + 32, 335, 857);
 	IDSC(desc_858 + 36, 330, 857);
 }
 

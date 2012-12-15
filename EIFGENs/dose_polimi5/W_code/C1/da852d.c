@@ -93,8 +93,8 @@ void Init852(void)
 {
 	IDSC(desc_852, 0, 851);
 	IDSC(desc_852 + 1, 1, 851);
-	IDSC(desc_852 + 32, 362, 851);
-	IDSC(desc_852 + 36, 350, 851);
+	IDSC(desc_852 + 32, 361, 851);
+	IDSC(desc_852 + 36, 349, 851);
 	IDSC(desc_852 + 50, 356, 851);
 	IDSC(desc_852 + 56, 368, 851);
 }

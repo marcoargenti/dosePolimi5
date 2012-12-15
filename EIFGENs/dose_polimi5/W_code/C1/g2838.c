@@ -113,14 +113,14 @@ void F838_6553 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTGC;
 	RTDBGEAA(837, Current, 11783);
 	if (arg1) {
-		RTCC(arg1, 837, l_feature_name, 1, 839);
+		RTCC(arg1, 837, l_feature_name, 1, 838);
 	}
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	tb1 = *(EIF_BOOLEAN *)(Current + RTWA(837, 32, dtype));
 	if ((EIF_BOOLEAN)(tb1 == (EIF_BOOLEAN) 0)) {
 		RTHOOK(2);
-		RTDBGAA(Current, dtype, 837, 34, 0xF8000347, 0); /* card */
+		RTDBGAA(Current, dtype, 837, 34, 0xF8000346, 0); /* card */
 		
 		RTAR(Current, arg1);
 		*(EIF_REFERENCE *)(Current + RTWA(837, 34, dtype)) = (EIF_REFERENCE) RTCCL(arg1);
@@ -254,10 +254,10 @@ void F838_6556 (EIF_REFERENCE Current)
 	RTDBGEAA(837, Current, 11786);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, dtype, 837, 34, 0xF8000347, 0); /* card */
+	RTDBGAA(Current, dtype, 837, 34, 0xF8000346, 0); /* card */
 	
 	tr1 = RTLNSMART(eif_non_attached_type(RTWCT(837, 34, Current)));
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(839, 38, Dtype(tr1)))(tr1);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(838, 38, Dtype(tr1)))(tr1);
 	RTNHOOK(1,1);
 	RTAR(Current, tr1);
 	*(EIF_REFERENCE *)(Current + RTWA(837, 34, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
@@ -305,10 +305,10 @@ void F838_6557 (EIF_REFERENCE Current)
 	RTDBGEAA(837, Current, 11787);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, dtype, 837, 34, 0xF8000347, 0); /* card */
+	RTDBGAA(Current, dtype, 837, 34, 0xF8000346, 0); /* card */
 	
 	tr1 = RTLNSMART(eif_non_attached_type(RTWCT(837, 34, Current)));
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(839, 38, Dtype(tr1)))(tr1);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(838, 38, Dtype(tr1)))(tr1);
 	RTNHOOK(1,1);
 	RTAR(Current, tr1);
 	*(EIF_REFERENCE *)(Current + RTWA(837, 34, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
@@ -436,7 +436,7 @@ EIF_TYPED_VALUE F838_6560 (EIF_REFERENCE Current)
 	RTDBGEAA(837, Current, 11790);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0xF8000347, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0xF8000346, 0,0); /* Result */
 	
 	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(837, 34, Dtype(Current)))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	RTVI(Current, RTAL);
@@ -542,7 +542,7 @@ void F838_6562 (EIF_REFERENCE Current)
 	RTHOOK(4);
 	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(837, 34, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	RTNHOOK(4,1);
-	tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", tr1))(tr1)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
+	tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", tr1))(tr1)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
 	ur1 = RTCCL(tr2);
 	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(837, 24, dtype))(Current, ur1x);
 	RTHOOK(5);

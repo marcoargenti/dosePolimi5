@@ -126,7 +126,7 @@ void Init873(void)
 	IDSC(desc_873 + 32, 198, 872);
 	IDSC(desc_873 + 36, 275, 872);
 	IDSC(desc_873 + 39, 344, 872);
-	IDSC(desc_873 + 43, 362, 872);
+	IDSC(desc_873 + 43, 361, 872);
 	IDSC(desc_873 + 47, 356, 872);
 	IDSC(desc_873 + 53, 354, 872);
 	IDSC(desc_873 + 62, 345, 872);

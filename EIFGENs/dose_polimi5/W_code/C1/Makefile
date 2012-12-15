@@ -43,7 +43,7 @@ OBJECTS = big_file_C1_c.obj
 
 OLDOBJECTS =  ma866.obj ma866d.obj ma866f.obj g2858.obj g2858d.obj g2858f.obj g2860.obj \
 	g2860d.obj g2860f.obj g2841.obj g2841d.obj g2841f.obj g2845.obj g2845d.obj g2845f.obj \
-	g2857.obj g2857d.obj g2857f.obj g2840.obj g2840d.obj g2840f.obj g2839.obj g2839d.obj \
+	g2840.obj g2840d.obj g2840f.obj g2857.obj g2857d.obj g2857f.obj g2839.obj g2839d.obj \
 	g2839f.obj g2838.obj g2838d.obj g2838f.obj g2846.obj g2846d.obj g2846f.obj g2859.obj \
 	g2859d.obj g2859f.obj c_837.obj c_837d.obj c_837f.obj ti864.obj ti864d.obj ti864f.obj \
 	ab865.obj ab865d.obj ab865f.obj ti850.obj ti850d.obj ti850f.obj da856.obj da856d.obj \

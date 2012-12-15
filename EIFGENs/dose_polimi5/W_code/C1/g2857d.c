@@ -14,7 +14,7 @@ static EIF_TYPE_INDEX gen_type1_857 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_857 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_857 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type4_857 [] = {0,876,837,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_857 [] = {0,240,839,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_857 [] = {0,240,838,0xFFFF};
 
 
 static struct desc_info desc_857[] = {
@@ -61,7 +61,7 @@ void Init857(void)
 {
 	IDSC(desc_857, 0, 856);
 	IDSC(desc_857 + 1, 1, 856);
-	IDSC(desc_857 + 32, 334, 856);
+	IDSC(desc_857 + 32, 335, 856);
 }
 
 

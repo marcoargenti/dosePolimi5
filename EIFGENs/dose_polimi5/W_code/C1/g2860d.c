@@ -14,7 +14,7 @@ static EIF_TYPE_INDEX gen_type1_860 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_860 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_860 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type4_860 [] = {0,876,837,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_860 [] = {0,240,839,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_860 [] = {0,240,838,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_860 [] = {0,240,845,0xFFFF};
 
 
@@ -73,7 +73,7 @@ void Init860(void)
 {
 	IDSC(desc_860, 0, 859);
 	IDSC(desc_860 + 1, 1, 859);
-	IDSC(desc_860 + 32, 334, 859);
+	IDSC(desc_860 + 32, 335, 859);
 	IDSC(desc_860 + 36, 340, 859);
 	IDSC(desc_860 + 46, 331, 859);
 }

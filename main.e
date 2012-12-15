@@ -71,7 +71,7 @@ feature {NONE} -- main feature
 
 			from
 			until
-				not full_board
+				full_board
 			loop
 				print_on_io_game_state(number_player)
 				if(number_player=1) then
@@ -100,9 +100,12 @@ feature {NONE} -- main feature
 				temp_x:=0
 				temp_y:=0
 			end
-			print("La partita è conclusa.%N%N")
 		--	print_on_io_array(print_board)
 			str:=print_board
+			print("La partita è conclusa.%N%N")
+			print("Il vincitore è: ")
+			print(winner)
+
 
 		end
 
@@ -129,10 +132,11 @@ feature {ANY} --support feature
 
 	full_board:BOOLEAN
 		local
-
+			count: INTEGER
 			i:INTEGER
 			j:INTEGER
 		do
+			count:=0
 			from
 				i:= 1
 			until
@@ -143,14 +147,22 @@ feature {ANY} --support feature
 				until
 					j > 3
 				loop
-					if(board[i,j].isoccupied=FALSE) then
-						result:=FALSE
+					if(board[i,j].isoccupied=TRUE) then
+						count:=count+1
 					end
 					j:=j+1
 				end
 				i:=i+1
 			end
-			result:=TRUE
+			if count=9 then
+
+				result:= TRUE
+
+			else
+
+				result:= FALSE
+
+			end
 		end
 
 	make_board: ARRAY2[G21_CELL]
@@ -476,6 +488,51 @@ feature {ANY} --support feature
 			board.item(move.position.x,move.position.y).setcard(move.card)
 			board.item(move.position.x,move.position.y).setplayernumber (player_number)
 			flip_card(move.position, move.card, player_number)
+		end
+
+	winner:STRING
+		local
+			cards_human_number: INTEGER
+			cards_ai_number: INTEGER
+			i:INTEGER
+			j:INTEGER
+		do
+			cards_human_number:= 0
+			cards_ai_number:= 0
+			from
+				i:= 1
+			until
+				i > 3
+			loop
+				from
+					j := 1
+				until
+					j > 3
+				loop
+					if(board[i,j].playernumber=1) then
+						cards_human_number:= cards_human_number+1
+					else
+						cards_ai_number:= cards_ai_number+1
+					end
+					j:=j+1
+				end
+				i:=i+1
+			end
+			if cards_human_number>cards_ai_number and then cards_human_number/=5 then
+
+				result:= "human player wins"
+
+			else if cards_human_number=5 then
+
+					result:= "draw"
+
+				else
+
+					result:= "ai wins"
+
+				end
+
+			end
 		end
 
 end

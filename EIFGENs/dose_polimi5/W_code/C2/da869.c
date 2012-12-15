@@ -2191,11 +2191,11 @@ EIF_TYPED_VALUE F869_6974 (EIF_REFERENCE Current)
 	RTDBGEAA(868, Current, 12174);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0xF800036A, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0xF800036B, 0,0); /* Result */
 	
-	tr1 = RTLN(874);
+	tr1 = RTLN(875);
 	ur1 = RTCCL(Current);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(874, 117, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(875, 117, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) RTCCL(tr1);
 	RTVI(Current, RTAL);

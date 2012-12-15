@@ -111,10 +111,10 @@ EIF_TYPED_VALUE F857_6754 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYP
 	RTGC;
 	RTDBGEAA(856, Current, 11956);
 	if (arg1) {
-		RTCC(arg1, 856, l_feature_name, 1, 839);
+		RTCC(arg1, 856, l_feature_name, 1, 838);
 	}
 	if (arg2) {
-		RTCC(arg2, 856, l_feature_name, 2, 839);
+		RTCC(arg2, 856, l_feature_name, 2, 838);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -155,31 +155,31 @@ body:;
 	tb3 = '\0';
 	tb4 = '\0';
 	tb5 = '\0';
-	ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 32, "right", arg1));
-	ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 32, "right", arg2));
+	ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 32, "right", arg1));
+	ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 32, "right", arg2));
 	if ((EIF_BOOLEAN)(ti4_1 == ti4_2)) {
-		ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 33, "left", arg1));
-		ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 33, "left", arg2));
+		ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 33, "left", arg1));
+		ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 33, "left", arg2));
 		tb5 = (EIF_BOOLEAN)(ti4_1 == ti4_2);
 	}
 	if (tb5) {
-		ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 34, "top", arg1));
-		ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 34, "top", arg2));
+		ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 34, "top", arg1));
+		ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 34, "top", arg2));
 		tb4 = (EIF_BOOLEAN)(ti4_1 == ti4_2);
 	}
 	if (tb4) {
-		ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 35, "bottom", arg1));
-		ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 35, "bottom", arg2));
+		ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 35, "bottom", arg1));
+		ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 35, "bottom", arg2));
 		tb3 = (EIF_BOOLEAN)(ti4_1 == ti4_2);
 	}
 	if (tb3) {
-		tc1 = *(EIF_CHARACTER_8 *)(arg1 + RTVA(839, 36, "element", arg1));
-		tc2 = *(EIF_CHARACTER_8 *)(arg2 + RTVA(839, 36, "element", arg2));
+		tc1 = *(EIF_CHARACTER_8 *)(arg1 + RTVA(838, 36, "element", arg1));
+		tc2 = *(EIF_CHARACTER_8 *)(arg2 + RTVA(838, 36, "element", arg2));
 		tb2 = (EIF_BOOLEAN)(tc1 == tc2);
 	}
 	if (tb2) {
-		tr5 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-		tr6 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		tr5 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		tr6 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 		tb1 = RTCEQ(tr5, tr6);
 	}
 	Result = (EIF_BOOLEAN) tb1;
@@ -209,31 +209,31 @@ body:;
 			tb4 = '\0';
 			tb5 = '\0';
 			tb6 = '\0';
-			ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 32, "right", arg1));
-			ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 32, "right", arg2));
+			ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 32, "right", arg1));
+			ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 32, "right", arg2));
 			if ((EIF_BOOLEAN)(ti4_1 == ti4_2)) {
-				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 33, "left", arg1));
-				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 33, "left", arg2));
+				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 33, "left", arg1));
+				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 33, "left", arg2));
 				tb6 = (EIF_BOOLEAN)(ti4_1 == ti4_2);
 			}
 			if (tb6) {
-				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 34, "top", arg1));
-				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 34, "top", arg2));
+				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 34, "top", arg1));
+				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 34, "top", arg2));
 				tb5 = (EIF_BOOLEAN)(ti4_1 == ti4_2);
 			}
 			if (tb5) {
-				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 35, "bottom", arg1));
-				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 35, "bottom", arg2));
+				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 35, "bottom", arg1));
+				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 35, "bottom", arg2));
 				tb4 = (EIF_BOOLEAN)(ti4_1 == ti4_2);
 			}
 			if (tb4) {
-				tc1 = *(EIF_CHARACTER_8 *)(arg1 + RTVA(839, 36, "element", arg1));
-				tc2 = *(EIF_CHARACTER_8 *)(arg2 + RTVA(839, 36, "element", arg2));
+				tc1 = *(EIF_CHARACTER_8 *)(arg1 + RTVA(838, 36, "element", arg1));
+				tc2 = *(EIF_CHARACTER_8 *)(arg2 + RTVA(838, 36, "element", arg2));
 				tb3 = (EIF_BOOLEAN)(tc1 == tc2);
 			}
 			if (tb3) {
-				tr5 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-				tr6 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+				tr5 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+				tr6 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 				tb2 = RTCEQ(tr5, tr6);
 			}
 			tb1 = tb2;
@@ -252,31 +252,31 @@ body:;
 			tb4 = '\01';
 			tb5 = '\01';
 			tb6 = '\01';
-			ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 32, "right", arg1));
-			ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 32, "right", arg2));
+			ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 32, "right", arg1));
+			ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 32, "right", arg2));
 			if (!(EIF_BOOLEAN)(ti4_1 != ti4_2)) {
-				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 33, "left", arg1));
-				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 33, "left", arg2));
+				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 33, "left", arg1));
+				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 33, "left", arg2));
 				tb6 = (EIF_BOOLEAN)(ti4_1 != ti4_2);
 			}
 			if (!tb6) {
-				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 34, "top", arg1));
-				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 34, "top", arg2));
+				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 34, "top", arg1));
+				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 34, "top", arg2));
 				tb5 = (EIF_BOOLEAN)(ti4_1 != ti4_2);
 			}
 			if (!tb5) {
-				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(839, 35, "bottom", arg1));
-				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(839, 35, "bottom", arg2));
+				ti4_1 = *(EIF_INTEGER_32 *)(arg1 + RTVA(838, 35, "bottom", arg1));
+				ti4_2 = *(EIF_INTEGER_32 *)(arg2 + RTVA(838, 35, "bottom", arg2));
 				tb4 = (EIF_BOOLEAN)(ti4_1 != ti4_2);
 			}
 			if (!tb4) {
-				tc1 = *(EIF_CHARACTER_8 *)(arg1 + RTVA(839, 36, "element", arg1));
-				tc2 = *(EIF_CHARACTER_8 *)(arg2 + RTVA(839, 36, "element", arg2));
+				tc1 = *(EIF_CHARACTER_8 *)(arg1 + RTVA(838, 36, "element", arg1));
+				tc2 = *(EIF_CHARACTER_8 *)(arg2 + RTVA(838, 36, "element", arg2));
 				tb3 = (EIF_BOOLEAN)(tc1 != tc2);
 			}
 			if (!tb3) {
-				tr5 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-				tr6 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(839, 37, "cardname", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+				tr5 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+				tr6 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(838, 37, "cardname", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 				tb2 = !RTCEQ(tr5, tr6);
 			}
 			tb1 = tb2;

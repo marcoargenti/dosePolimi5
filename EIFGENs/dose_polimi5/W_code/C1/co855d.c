@@ -81,7 +81,7 @@ void Init855(void)
 {
 	IDSC(desc_855, 0, 854);
 	IDSC(desc_855 + 1, 1, 854);
-	IDSC(desc_855 + 32, 358, 854);
+	IDSC(desc_855 + 32, 357, 854);
 }
 
 

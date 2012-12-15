@@ -103,7 +103,7 @@ static struct desc_info desc_862[] = {
 	{12015, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{12016, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{12017, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{12020, 0, 874, NULL},
+	{12020, 0, 875, NULL},
 	{12022, (BODY_INDEX)-1, 169, NULL},
 	{12023, (BODY_INDEX)-1, 175, NULL},
 	{12026, (BODY_INDEX)-1, 172, NULL},
@@ -127,11 +127,11 @@ void Init862(void)
 	IDSC(desc_862 + 32, 198, 861);
 	IDSC(desc_862 + 36, 353, 861);
 	IDSC(desc_862 + 39, 365, 861);
-	IDSC(desc_862 + 44, 362, 861);
-	IDSC(desc_862 + 48, 350, 861);
+	IDSC(desc_862 + 44, 361, 861);
+	IDSC(desc_862 + 48, 349, 861);
 	IDSC(desc_862 + 62, 356, 861);
 	IDSC(desc_862 + 68, 368, 861);
-	IDSC(desc_862 + 77, 363, 861);
+	IDSC(desc_862 + 77, 362, 861);
 }
 
 

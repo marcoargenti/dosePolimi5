@@ -102,7 +102,7 @@ static struct desc_info desc_871[] = {
 	{12206, (BODY_INDEX)-1, 201, NULL},
 	{12207, (BODY_INDEX)-1, 201, NULL},
 	{12208, (BODY_INDEX)-1, 201, NULL},
-	{12209, (BODY_INDEX)-1, 874, NULL},
+	{12209, (BODY_INDEX)-1, 875, NULL},
 	{12210, (BODY_INDEX)-1, 868, NULL},
 	{12211, (BODY_INDEX)-1, 872, NULL},
 	{12212, (BODY_INDEX)-1, 172, NULL},
@@ -111,8 +111,8 @@ static struct desc_info desc_871[] = {
 	{12215, 8, 231, gen_type6_871},
 	{12216, 16, 231, gen_type7_871},
 	{12217, 33, 172, NULL},
-	{12218, (BODY_INDEX)-1, 875, NULL},
-	{12219, 24, 875, NULL},
+	{12218, (BODY_INDEX)-1, 874, NULL},
+	{12219, 24, 874, NULL},
 };
 
 extern void Init871(void);
@@ -121,7 +121,7 @@ void Init871(void)
 	IDSC(desc_871, 0, 870);
 	IDSC(desc_871 + 1, 1, 870);
 	IDSC(desc_871 + 32, 55, 870);
-	IDSC(desc_871 + 38, 358, 870);
+	IDSC(desc_871 + 38, 357, 870);
 	IDSC(desc_871 + 64, 352, 870);
 	IDSC(desc_871 + 68, 342, 870);
 }

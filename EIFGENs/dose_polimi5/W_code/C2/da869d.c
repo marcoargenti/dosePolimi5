@@ -134,7 +134,7 @@ static struct desc_info desc_869[] = {
 	{12171, (BODY_INDEX)-1, 187, NULL},
 	{12172, (BODY_INDEX)-1, 187, NULL},
 	{12173, (BODY_INDEX)-1, 187, NULL},
-	{12174, (BODY_INDEX)-1, 874, NULL},
+	{12174, (BODY_INDEX)-1, 875, NULL},
 	{12175, (BODY_INDEX)-1, 868, NULL},
 	{12176, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{12178, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
@@ -160,13 +160,13 @@ void Init869(void)
 	IDSC(desc_869 + 32, 198, 868);
 	IDSC(desc_869 + 36, 275, 868);
 	IDSC(desc_869 + 39, 344, 868);
-	IDSC(desc_869 + 43, 362, 868);
-	IDSC(desc_869 + 47, 350, 868);
+	IDSC(desc_869 + 43, 361, 868);
+	IDSC(desc_869 + 47, 349, 868);
 	IDSC(desc_869 + 61, 366, 868);
 	IDSC(desc_869 + 69, 119, 868);
-	IDSC(desc_869 + 71, 360, 868);
-	IDSC(desc_869 + 83, 361, 868);
-	IDSC(desc_869 + 90, 349, 868);
+	IDSC(desc_869 + 71, 359, 868);
+	IDSC(desc_869 + 83, 360, 868);
+	IDSC(desc_869 + 90, 348, 868);
 	IDSC(desc_869 + 126, 323, 868);
 }
 

@@ -14,7 +14,7 @@ static EIF_TYPE_INDEX gen_type1_859 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_859 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_859 [] = {0,0,0xFFFF};
 static EIF_TYPE_INDEX gen_type4_859 [] = {0,876,837,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_859 [] = {0,240,839,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_859 [] = {0,240,838,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_859 [] = {0,240,845,0xFFFF};
 
 
@@ -72,7 +72,7 @@ void Init859(void)
 {
 	IDSC(desc_859, 0, 858);
 	IDSC(desc_859 + 1, 1, 858);
-	IDSC(desc_859 + 32, 334, 858);
+	IDSC(desc_859 + 32, 335, 858);
 	IDSC(desc_859 + 36, 340, 858);
 }
 

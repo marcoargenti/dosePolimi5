@@ -107,12 +107,12 @@ void Init868(void)
 {
 	IDSC(desc_868, 0, 867);
 	IDSC(desc_868 + 1, 1, 867);
-	IDSC(desc_868 + 32, 362, 867);
-	IDSC(desc_868 + 36, 350, 867);
+	IDSC(desc_868 + 32, 361, 867);
+	IDSC(desc_868 + 36, 349, 867);
 	IDSC(desc_868 + 50, 366, 867);
 	IDSC(desc_868 + 58, 119, 867);
-	IDSC(desc_868 + 60, 360, 867);
-	IDSC(desc_868 + 72, 361, 867);
+	IDSC(desc_868 + 60, 359, 867);
+	IDSC(desc_868 + 72, 360, 867);
 }
 
 

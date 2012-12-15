@@ -18,14 +18,14 @@ static EIF_TYPE_INDEX gen_type5_866 [] = {0,231,201,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_866 [] = {0,222,201,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_866 [] = {0,201,0xFFFF};
 static EIF_TYPE_INDEX gen_type8_866 [] = {0,876,837,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_866 [] = {0,240,839,0xFFFF};
-static EIF_TYPE_INDEX gen_type10_866 [] = {0,240,839,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_866 [] = {0,240,838,0xFFFF};
+static EIF_TYPE_INDEX gen_type10_866 [] = {0,240,838,0xFFFF};
 static EIF_TYPE_INDEX gen_type11_866 [] = {0,876,837,0xFFFF};
 static EIF_TYPE_INDEX gen_type12_866 [] = {0,231,201,0xFFFF};
 static EIF_TYPE_INDEX gen_type13_866 [] = {0,231,201,0xFFFF};
 static EIF_TYPE_INDEX gen_type14_866 [] = {0,231,201,0xFFFF};
 static EIF_TYPE_INDEX gen_type15_866 [] = {0,231,201,0xFFFF};
-static EIF_TYPE_INDEX gen_type16_866 [] = {0,240,839,0xFFFF};
+static EIF_TYPE_INDEX gen_type16_866 [] = {0,240,838,0xFFFF};
 
 
 static struct desc_info desc_866[] = {

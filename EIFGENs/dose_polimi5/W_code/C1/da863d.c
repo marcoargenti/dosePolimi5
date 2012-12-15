@@ -118,10 +118,10 @@ void Init863(void)
 	IDSC(desc_863 + 32, 198, 862);
 	IDSC(desc_863 + 36, 353, 862);
 	IDSC(desc_863 + 39, 365, 862);
-	IDSC(desc_863 + 44, 362, 862);
-	IDSC(desc_863 + 48, 350, 862);
+	IDSC(desc_863 + 44, 361, 862);
+	IDSC(desc_863 + 48, 349, 862);
 	IDSC(desc_863 + 62, 366, 862);
-	IDSC(desc_863 + 70, 359, 862);
+	IDSC(desc_863 + 70, 358, 862);
 }
 
 

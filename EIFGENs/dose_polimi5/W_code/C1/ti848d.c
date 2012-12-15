@@ -65,7 +65,7 @@ void Init848(void)
 {
 	IDSC(desc_848, 0, 847);
 	IDSC(desc_848 + 1, 1, 847);
-	IDSC(desc_848 + 32, 362, 847);
+	IDSC(desc_848 + 32, 361, 847);
 	IDSC(desc_848 + 36, 356, 847);
 }
 

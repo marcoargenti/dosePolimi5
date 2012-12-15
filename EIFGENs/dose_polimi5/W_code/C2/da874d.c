@@ -138,17 +138,17 @@ void Init874(void)
 {
 	IDSC(desc_874, 0, 873);
 	IDSC(desc_874 + 1, 1, 873);
-	IDSC(desc_874 + 32, 362, 873);
-	IDSC(desc_874 + 36, 350, 873);
+	IDSC(desc_874 + 32, 361, 873);
+	IDSC(desc_874 + 36, 349, 873);
 	IDSC(desc_874 + 50, 366, 873);
 	IDSC(desc_874 + 58, 119, 873);
-	IDSC(desc_874 + 60, 360, 873);
-	IDSC(desc_874 + 72, 361, 873);
+	IDSC(desc_874 + 60, 359, 873);
+	IDSC(desc_874 + 72, 360, 873);
 	IDSC(desc_874 + 79, 356, 873);
 	IDSC(desc_874 + 85, 354, 873);
 	IDSC(desc_874 + 94, 345, 873);
 	IDSC(desc_874 + 104, 346, 873);
-	IDSC(desc_874 + 107, 357, 873);
+	IDSC(desc_874 + 107, 364, 873);
 }
 
 

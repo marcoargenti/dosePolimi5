@@ -86,8 +86,8 @@ void Init854(void)
 {
 	IDSC(desc_854, 0, 853);
 	IDSC(desc_854 + 1, 1, 853);
-	IDSC(desc_854 + 32, 362, 853);
-	IDSC(desc_854 + 36, 350, 853);
+	IDSC(desc_854 + 32, 361, 853);
+	IDSC(desc_854 + 36, 349, 853);
 	IDSC(desc_854 + 50, 366, 853);
 }
 

@@ -160,8 +160,11 @@ available_positions --it fills the variable free_positions with POINT objects. I
 			row: INTEGER
 			column: INTEGER
 			position: G21_POINT
+			length: INTEGER
 
 		do
+			length:= free_positions.count
+			create free_positions.make (0)
 			print(free_positions.count)
 			print("positioni disponibili")
 

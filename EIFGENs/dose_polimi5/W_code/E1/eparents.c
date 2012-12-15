@@ -3356,11 +3356,11 @@ static struct eif_par_types par836 = {836, ptf836, (uint16) 0, (char) 0};
 static EIF_TYPE_INDEX ptf837[] = {0,0,0xFFFF};
 static struct eif_par_types par837 = {837, ptf837, (uint16) 0, (char) 0};
 
-/* G21_POINT */
+/* G21_CARD */
 static EIF_TYPE_INDEX ptf838[] = {0,0,0xFFFF};
 static struct eif_par_types par838 = {838, ptf838, (uint16) 0, (char) 0};
 
-/* G21_CARD */
+/* G21_POINT */
 static EIF_TYPE_INDEX ptf839[] = {0,0,0xFFFF};
 static struct eif_par_types par839 = {839, ptf839, (uint16) 0, (char) 0};
 
@@ -3500,12 +3500,12 @@ static struct eif_par_types par872 = {872, ptf872, (uint16) 0, (char) 0};
 static EIF_TYPE_INDEX ptf873[] = {0,867,0xFFF7,0,871,0xFFF7,0,0,0xFFFF};
 static struct eif_par_types par873 = {873, ptf873, (uint16) 0, (char) 0};
 
-/* DATE_TIME */
-static EIF_TYPE_INDEX ptf874[] = {0,864,0xFFF7,0,852,0xFFF7,0,873,0xFFF7,0,130,0xFFFF};
+/* DATE_TIME_PARSER */
+static EIF_TYPE_INDEX ptf874[] = {0,873,0xFFF7,0,869,0xFFFF};
 static struct eif_par_types par874 = {874, ptf874, (uint16) 0, (char) 0};
 
-/* DATE_TIME_PARSER */
-static EIF_TYPE_INDEX ptf875[] = {0,873,0xFFF7,0,869,0xFFFF};
+/* DATE_TIME */
+static EIF_TYPE_INDEX ptf875[] = {0,864,0xFFF7,0,852,0xFFF7,0,873,0xFFF7,0,130,0xFFFF};
 static struct eif_par_types par875 = {875, ptf875, (uint16) 0, (char) 0};
 
 /* ARRAY2 [G#1] */

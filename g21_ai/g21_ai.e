@@ -26,7 +26,8 @@ feature{G21_AI,MAIN} -- Interface Procedures, the only method the Logic componen
 		ensure
 
 			result_valid: result/=void
-			free_position: board.item(result.position.x, result.position.y)/=void and then board.item(result.position.x, result.position.y).isoccupied=FALSE
+		--	free_position: board.item(result.position.x, result.position.y)/=void
+			free_position: board.item(result.position.x, result.position.y).isoccupied=FALSE
 		--	card_in_deck: cards.index_of (result.card,1)/=0
 			card_position_not_changed: card_position=old card_position and then card_position.x=old card_position.x and then card_position.y=old card_position.y
 			deck_not_changed: cards=old cards and then cards.count = old cards.count

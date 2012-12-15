@@ -4782,18 +4782,18 @@ char *names838 [] =
 
 char *names839 [] =
 {
-"x",
-"y",
-};
-
-char *names840 [] =
-{
 "cardname",
 "element",
 "right",
 "left",
 "top",
 "bottom",
+};
+
+char *names840 [] =
+{
+"x",
+"y",
 };
 
 char *names845 [] =
@@ -4938,15 +4938,6 @@ char *names874 [] =
 
 char *names875 [] =
 {
-"time",
-"date",
-"compact_time",
-"ordered_compact_date",
-"fractional_second",
-};
-
-char *names876 [] =
-{
 "source_string",
 "day_text_val",
 "code",
@@ -4963,6 +4954,15 @@ char *names876 [] =
 "base_century",
 "fractional_second",
 "fine_second_val",
+};
+
+char *names876 [] =
+{
+"time",
+"date",
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
 };
 
 char *names877 [] =
