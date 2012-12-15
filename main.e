@@ -32,6 +32,7 @@ feature {NONE} -- main feature
 			temp_x:INTEGER
 			temp_y:INTEGER
 			temp_move:G21_MOVE
+			temp_move_ai:G21_MOVE
 			temp_position: G21_POINT
 			temp_index_card:INTEGER
 		do
@@ -91,11 +92,13 @@ feature {NONE} -- main feature
 					number_player:=2
 				else
 					print("%N%N")
-					temp_move:= ai.make_a_move (temp_move.position) --temp_move contains a move of the first player or it is void
-					insert_catd_into_board(number_player, temp_move)
+					temp_move_ai:= ai.make_a_move (temp_move.position) --temp_move contains a move of the first player or it is void
+					insert_catd_into_board(number_player, temp_move_ai)
 					cards_ai.prune(temp_move.card)
 					number_player:=1
 				end
+				temp_x:=0
+				temp_y:=0
 			end
 			print("La partita è conclusa.%N%N")
 		--	print_on_io_array(print_board)
@@ -111,7 +114,6 @@ feature {ANY} --support feature
 			create cell.make
 			cell.setcard (move.card)
 			cell.setplayernumber (number_player)
-			print(cell.isoccupied)
 			board[move.position.x,move.position.y] := cell
 		end
 

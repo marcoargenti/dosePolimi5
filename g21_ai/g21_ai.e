@@ -19,7 +19,7 @@ feature{G21_AI,MAIN} -- Interface Procedures, the only method the Logic componen
 
 		require
 
-			position_enemy_card: card_position=void or else board[card_position.y, card_position.x].isOccupied=TRUE
+		--	position_enemy_card: card_position=void or else board[card_position.y, card_position.x].isOccupied=TRUE
 
 		deferred
 
