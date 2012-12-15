@@ -111,6 +111,7 @@ feature {ANY} --support feature
 			create cell.make
 			cell.setcard (move.card)
 			cell.setplayernumber (number_player)
+			print(cell.isoccupied)
 			board[move.position.x,move.position.y] := cell
 		end
 
