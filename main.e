@@ -75,7 +75,11 @@ feature {NONE} -- main feature
 			loop
 				print_on_io_game_state(number_player)
 				if(number_player=1) then
-					print("E' il tuo turno.%NInserisci il numero della carta che vuoi inserire%N")
+					print("E' il tuo turno")
+					print("%NLe tue carte sono:%N")
+					str:=print_cards(cards)
+					print_on_io_array(str)
+					print("%NInserisci il numero della carta che vuoi inserire%N")
 					io.read_integer
 					read:=io.last_integer
 					temp_index_card:=read
@@ -87,13 +91,13 @@ feature {NONE} -- main feature
 					temp_y:=io.last_integer
 					create temp_position.make (temp_x, temp_y)
 					create temp_move.make (cards.at (temp_index_card), temp_position)
-					insert_catd_into_board(number_player, temp_move)
+					insert_card_into_board(number_player, temp_move)
 					remove_card(number_player, temp_index_card)
 					number_player:=2
 				else
 					print("%N%N")
 					temp_move_ai:= ai.make_a_move (temp_move.position) --temp_move contains a move of the first player or it is void
-					insert_catd_into_board(number_player, temp_move_ai)
+					insert_card_into_board(number_player, temp_move_ai)
 					cards_ai.prune(temp_move.card)
 					number_player:=1
 				end
@@ -110,22 +114,25 @@ feature {NONE} -- main feature
 		end
 
 feature {ANY} --support feature
-	insert_catd_into_board(number_player: INTEGER; move:G21_MOVE)
+	insert_card_into_board(number_player: INTEGER; move:G21_MOVE)
 		local
 			cell: G21_CELL
 		do
 			create cell.make
-			cell.setcard (move.card)
-			cell.setplayernumber (number_player)
+			--cell.setcard (move.card)
+			--cell.setplayernumber (number_player)
 			board[move.position.x,move.position.y] := cell
+			make_move(move, number_player)
 		end
 
 	remove_card(number_player: INTEGER; index_card: INTEGER)
 		do
 			if(number_player=1) then
 					cards.prune (cards[index_card])
+					cards.start
 				else
 					cards_ai.prune (cards_ai[index_card])
+					cards_ai.start
 				end
 		end
 
@@ -451,7 +458,7 @@ feature {ANY} --support feature
 			if row-1>=1 then
 				if board.item (row-1, column).isoccupied=TRUE then
 					if 	board.item(row-1, column).getplayernumber/=number and then	card.top>board.item (row-1, column).card.bottom then
-						board.item(row, column-1).setplayernumber (number)
+						board.item(row-1, column).setplayernumber (number)
 					end
 				end
 			end
@@ -459,7 +466,7 @@ feature {ANY} --support feature
 			if row+1<=3 then
 				if board.item (row+1, column).isoccupied=TRUE then
 					if board.item(row+1, column).getplayernumber/=number and then card.bottom>board.item (row+1, column).card.top then
-						board.item(row, column-1).setplayernumber (number)
+						board.item(row+1, column).setplayernumber (number)
 					end
 				end
 			end
@@ -475,7 +482,7 @@ feature {ANY} --support feature
 			if column+1<=3 then
 				if board.item (row, column+1).isoccupied=TRUE then
 					if board.item(row, column+1).getplayernumber/=number and then card.right>board.item (row, column+1).card.left then
-						board.item(row, column-1).setplayernumber (number)
+						board.item(row, column+1).setplayernumber (number)
 					end
 				end
 			end

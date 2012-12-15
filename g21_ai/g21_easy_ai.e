@@ -100,7 +100,7 @@ feature{NONE} -- Procedures
 				temp:=1
 			end
 			result:= cards.i_th (temp)
-		--	cards.start
+			cards.start
 
 
 		ensure
@@ -134,7 +134,7 @@ feature{NONE} -- Procedures
       		create random_sequence.set_seed (l_seed)
       		print("forth")
       		random_sequence.forth
-			temp:=(random_sequence.item)\\cards.count
+			temp:=(random_sequence.item)\\free_positions.count
 			if(temp=0) then
 				temp:=1
 			end

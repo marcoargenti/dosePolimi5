@@ -128,3 +128,19 @@ MAIN                make @34
 MAIN                root's creation                                     
 <00000000020A05A8>                         Routine failure.              Exit
 -------------------------------------------------------------------------------
+
+dose_polimi5: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+G21_POINT           make @1                x_value_valid:               
+<00000000022AC8B8>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+MAIN                make @33                                            
+<00000000022205A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+MAIN                root's creation                                     
+<00000000022205A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
