@@ -76,9 +76,9 @@ feature {NONE} -- main feature
 				print_on_io_game_state(number_player)
 				if(number_player=1) then
 					print("E' il tuo turno")
-					print("%NLe tue carte sono:%N")
-					str:=print_cards(cards)
-					print_on_io_array(str)
+					--print("%NLe tue carte sono:%N")
+					--str:=print_cards(cards)
+					--print_on_io_array(str)
 					print("%NInserisci il numero della carta che vuoi inserire%N")
 					io.read_integer
 					read:=io.last_integer

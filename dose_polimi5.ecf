@@ -21,6 +21,7 @@
 				<cluster name="g21_fake_board" location=".\g21_ai\g21_fake_board\"/>
 			</cluster>
 			<cluster name="g21_logic" location=".\g21_logic\"/>
+			<cluster name="g21_rules" location=".\g21_rules\"/>
 		</cluster>
 	</target>
 </system>
