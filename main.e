@@ -17,6 +17,8 @@ feature{NONE} -- Attributes
 			ai: G21_AI
 			cards: ARRAYED_LIST[G21_CARD] --human cards
 			cards_ai: ARRAYED_LIST[G21_CARD]
+			rules: G21_RULESCONTAINER
+			rules_on: BOOLEAN
 
 feature {NONE} -- main feature
 
@@ -36,7 +38,7 @@ feature {NONE} -- main feature
 			temp_position: G21_POINT
 			temp_index_card:INTEGER
 		do
-			print ("Triple Triad!%N")
+			print ("Triple Triad!%N%N")
 
 			create cards.make (5)
 			create board.make_filled (void, 3, 3)
@@ -44,6 +46,8 @@ feature {NONE} -- main feature
 			cards:=make_deck
 			cards_ai:=cards.twin
 			print(cards.count)
+			rules_creation
+
 
 			from
 			until
@@ -54,8 +58,8 @@ feature {NONE} -- main feature
 				read:=io.last_integer
 
 				if(read=3) then
-				--	create temp_hard_ai.make (board, cards_ai)
-				--	ai:=temp_hard_ai
+					create temp_hard_ai.make (board, cards_ai, rules)
+					ai:=temp_hard_ai
 				end
 				if(read=2) then
 					create temp_medium_ai.make (board, cards_ai)
@@ -119,10 +123,42 @@ feature {ANY} --support feature
 			cell: G21_CELL
 		do
 			create cell.make
-			--cell.setcard (move.card)
-			--cell.setplayernumber (number_player)
+			cell.setcard (move.card)
+			cell.setplayernumber (number_player)
 			board[move.position.x,move.position.y] := cell
-			make_move(move, number_player)
+
+			if rules_on=TRUE then
+
+				if rules.plusrule.getison=TRUE and then rules.plusrule.ismakechange (move.position.x, move.position.y, move.card) then
+
+					print("verifico plus%N")
+
+					rules.plusrule.makechangeandupdate (move.position.x, move.position.y)
+
+				else if rules.samerule.getison=TRUE and then rules.samerule.ismakechange (move.position.x, move.position.y, move.card) then
+
+							print("verifico same%N")
+
+							rules.samerule.makechangeandupdate (move.position.x, move.position.y)
+
+					else if rules.samewallrule.getison=TRUE and then rules.samewallrule.ismakechange (move.position.x, move.position.y, move.card) then
+
+
+							print("verifico samewall%N")
+
+							rules.samewallrule.makechangeandupdate (move.position.x, move.position.y)
+
+						end
+
+					end
+
+				end
+
+			else
+
+				make_move(move, number_player)
+
+			end
 		end
 
 	remove_card(number_player: INTEGER; index_card: INTEGER)
@@ -492,8 +528,8 @@ feature {ANY} --support feature
 	make_move(move: G21_MOVE; player_number: INTEGER)
 		local
 		do
-			board.item(move.position.x,move.position.y).setcard(move.card)
-			board.item(move.position.x,move.position.y).setplayernumber (player_number)
+			--board.item(move.position.x,move.position.y).setcard(move.card)
+			--board.item(move.position.x,move.position.y).setplayernumber (player_number)
 			flip_card(move.position, move.card, player_number)
 		end
 
@@ -539,6 +575,48 @@ feature {ANY} --support feature
 
 				end
 
+			end
+		end
+
+	rules_creation
+		local
+			read: INTEGER
+		do
+			create rules.make
+			print ("%NVuoi usare le regole? 1 per si, 0 per no%N")
+			io.read_integer
+			read:=io.last_integer
+			if read=1 then
+				rules_on:= TRUE
+				print ("%NVuoi usare le regola OPEN? 1 per si, 0 per no%N")
+				io.read_integer
+				read:=io.last_integer
+				rules.activeopen (board)
+				rules.openrule.setcarddeckplayer1 (cards)
+				if read=0 then
+					rules.openrule.set_ison (FALSE)
+				end
+				print ("%NVuoi usare le regola PLUS? 1 per si, 0 per no%N")
+				io.read_integer
+				read:=io.last_integer
+				rules.activeplus (board)
+				if read=0 then
+					rules.plusrule.set_ison (FALSE)
+				end
+				print ("%NVuoi usare le regola SAME? 1 per si, 0 per no%N")
+				io.read_integer
+				read:=io.last_integer
+				rules.activesame (board)
+				if read=0 then
+					rules.samerule.set_ison (FALSE)
+				end
+				print ("%NVuoi usare le regola SAMEWALL? 1 per si, 0 per no%N")
+				io.read_integer
+				read:=io.last_integer
+				rules.activesamewall (board)
+				if read=0 then
+					rules.samewallrule.set_ison (FALSE)
+				end
 			end
 		end
 

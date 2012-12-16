@@ -16,19 +16,19 @@ create
 
 
 	feature
-	cardDeckPlayer1:ARRAY[G21_CARD]
+	cardDeckPlayer1:ARRAYED_LIST[G21_CARD]
 	make(board:ARRAY2[G21_CELL])
 		do
 			init(board)
 			--create cardDeckPlayer1.make_empty
 			--cardDeckPlayer1.copy()
 		end
-	setCardDeckPlayer1(deck:ARRAY[G21_CARD])
+	setCardDeckPlayer1(deck:ARRAYED_LIST[G21_CARD])
 	do
-		create carddeckplayer1.make_empty
-		cardDeckPlayer1.copy(deck)
+		create carddeckplayer1.make (0)
+		cardDeckPlayer1:=deck.twin
 	end
-	getCardDeckPlayer1:ARRAY[G21_CARD]
+	getCardDeckPlayer1:ARRAYED_LIST[G21_CARD]
 	do
 
 		if(carddeckplayer1 = void)then
@@ -112,7 +112,7 @@ create
 		end
 	end
 
-	makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 ):ARRAY2[G21_CELL]
+	makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 )
 	local
 		p1:INTEGER
 		p2:INTEGER
@@ -172,6 +172,6 @@ create
 				   end
 			end
 		end
-		Result := gameboard
+		
 	end
 end

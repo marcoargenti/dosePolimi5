@@ -19,10 +19,13 @@ create
 		end
 	isMakeChange(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 ; card:G21_CARD):BOOLEAN
 	do
-
+		
 	end
 
-	makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 ):ARRAY2[G21_CELL]
+
+
+
+	makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 )
 	local
 		num:INTEGER
 	do
@@ -124,7 +127,7 @@ create
 		   		end
 		   end
 		end
-		Result := gameboard
+
 	end
 
 end

@@ -22,7 +22,7 @@ create
 
 	end
 
-	makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 ):ARRAY2[G21_CELL]
+	makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 )
 	local
 		num:INTEGER
 	do
@@ -148,7 +148,6 @@ create
 
 
 
-		Result := gameboard
 	end
 
 

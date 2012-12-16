@@ -12,6 +12,12 @@ deferred class
 		isOn:BOOLEAN
 
 	feature
+
+		set_isOn(on: BOOLEAN)
+			do
+				isON:=on
+			end
+
 		init(board:ARRAY2[G21_CELL])
 		local
 			i:INTEGER
@@ -63,7 +69,7 @@ deferred class
 		isMakeChange(pos_X:INTEGER_32 ; pos_Y:INTEGER_32 ; card:G21_CARD):BOOLEAN
 		deferred end
 
-		makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32):ARRAY2[G21_CELL]
+		makeChangeAndUpdate(pos_X:INTEGER_32 ; pos_Y:INTEGER_32)
 		deferred
 		end
 		printBoard(board:ARRAY2[G21_CELL])
