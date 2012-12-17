@@ -48,7 +48,7 @@ feature{G21_AI, G21_MOVE} -- Setter Procedures
 
 		do
 
-			card:=new_card.twin
+			card:=new_card
 
 		ensure
 

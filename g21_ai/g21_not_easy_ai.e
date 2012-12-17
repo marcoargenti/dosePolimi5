@@ -266,8 +266,6 @@ feature{G21_NOT_EASY_AI} -- Procedures
 
 			end
 
-			print("ho finito calcolare i valori")
-
 		ensure
 
 			result_not_void: valuated_moves/=void

@@ -27,6 +27,7 @@ feature{NONE} -- Attributes
 	use_fake_board: BOOLEAN
 	fake: G21_FAKE_BOARD
 	ai_rules: G21_RULESCONTAINER
+	rules_on: BOOLEAN
 
 feature{NONE} -- Creation
 
@@ -36,42 +37,51 @@ feature{NONE} -- Creation
 
 			game_board_valid: game_board/=void
 			ai_cards_valid: ai_cards/=void
-			game_rules_valid: game_rules/=void
+			--game_rules_valid: game_rules/=void
 
 		do
 
 			board:=game_board
 			cards:=ai_cards
-			rules:=game_rules
 			create_possible_moves
 
-			if rules.openrule.getison and then (rules.plusRule.getison or else rules.sameRule.getison or else rules.samewallRule.getison) then
+			if	game_rules/=void then
+				rules_on:=TRUE
+				rules:=game_rules
 
-				use_fake_board:=TRUE
-				create fake.make(game_board)
-				create ai_rules.make
+				if rules.openrule.getison and then (rules.plusRule.getison or else rules.sameRule.getison or else rules.samewallRule.getison) then
 
-				if game_rules.plusrule.getison then
+					use_fake_board:=TRUE
+					create fake.make(game_board)
+					create ai_rules.make
 
-					ai_rules.activeplus (fake.fake_board)
+					if game_rules.plusrule.getison then
 
-				end
+						ai_rules.activeplus (fake.fake_board)
 
-				if game_rules.samerule.getison then
+					end
 
-					ai_rules.activesame (fake.fake_board)
+					if game_rules.samerule.getison then
 
-				end
+						ai_rules.activesame (fake.fake_board)
 
-				if game_rules.plusrule.getison then
+					end
 
-					ai_rules.activesamewall (fake.fake_board)
+					if game_rules.plusrule.getison then
+
+						ai_rules.activesamewall (fake.fake_board)
+
+					end
+
+				else
+
+					use_fake_board:=FALSE
 
 				end
 
 			else
 
-				use_fake_board:=FALSE
+				rules_on:=FALSE
 
 			end
 
@@ -80,10 +90,10 @@ feature{NONE} -- Creation
 
 			game_board_not_modified: game_board/=void and then game_board = old game_board
 			ai_cards_not_modified: ai_cards/=void and then ai_cards = old ai_cards and then ai_cards.count=old ai_cards.count
-			game_rules_not_modified: game_rules/=void and then game_rules = old game_rules
+			--game_rules_not_modified: game_rules/=void and then game_rules = old game_rules
 			game_board_assigned: board/=void and then game_board = board
 			ai_cards_assigned: cards/=void and then ai_cards = cards and then ai_cards.count=cards.count
-			game_rules_assigned: rules/=void and then game_rules = rules
+			--game_rules_assigned: rules/=void and then game_rules = rules
 			board_assigned_first_row: board.item(1, 1) = game_board.item(1, 1) and then board.item(1, 2) = game_board.item(1, 2) and then board.item(1, 3) = game_board.item(1, 3)
 			board_assigned_second_row: board.item(2, 1) = game_board.item(2, 1) and then board.item(2, 2) = game_board.item(2, 2) and then board.item(2, 3) = game_board.item(2, 3)
 			board_assigned_third_row: board.item(3, 1) = game_board.item(3, 1) and then board.item(3, 2) = game_board.item(3, 2) and then board.item(3, 3) = game_board.item(3, 3)
@@ -114,12 +124,12 @@ feature{G21_BOARD, TEST_G21_HARD_AI_MAKE_A_MOVE} -- Interface Procedure
 
 			end
 
-			move_to_make:= choose_move.twin
+			move_to_make:= choose_move
 
 			remove_card(move_to_make.card)
 
 			remove_position_and_update(move_to_make.position, FALSE)
-			result:=move_to_make.twin
+			result:=move_to_make
 
 		--ensure
 
@@ -141,7 +151,7 @@ feature{NONE} -- Procedure
 			actual_move.set_value(0)
 			card_to_use:=actual_move.card.twin
 
-			if (rules.plusRule.getison and then rules.plusRule.ismakechange(actual_move.position.x, actual_move.position.y, card_to_use)) or else (rules.sameRule.getison and then rules.sameRule.ismakechange(actual_move.position.x, actual_move.position.y, card_to_use)) or else (rules.samewallRule.getison and then rules.samewallRule.ismakechange(actual_move.position.x, actual_move.position.y, card_to_use)) then
+			if rules_on=TRUE and then ((rules.plusRule.getison and then rules.plusRule.ismakechange(actual_move.position.x, actual_move.position.y, card_to_use)) or else (rules.sameRule.getison and then rules.sameRule.ismakechange(actual_move.position.x, actual_move.position.y, card_to_use)) or else (rules.samewallRule.getison and then rules.samewallRule.ismakechange(actual_move.position.x, actual_move.position.y, card_to_use))) then
 
 				actual_move.set_value (actual_move.value+rule_flip_value)
 
@@ -274,7 +284,7 @@ feature{NONE} -- Procedure
 
 
 			fake.remove_fake_move (ai_position)
-			
+
 
 		ensure
 
@@ -287,9 +297,9 @@ feature{NONE} -- Procedure
 
 		end
 
-invariant
+--invariant
 
-	rules_valid: rules /= void
+--	rules_valid: rules /= void
 
 end
 

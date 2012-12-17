@@ -65,7 +65,7 @@ feature{G21_BOARD, TEST_G21_EASY_AI_MAKE_A_MOVE} -- Procedures
 			card_choosen:=random_card
 			position_choosen:=random_position
 			create move.make(card_choosen,position_choosen)
-			result:= move.twin
+			result:= move
 
 		--ensure
 

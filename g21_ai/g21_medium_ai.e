@@ -66,10 +66,10 @@ feature{G21_BOARD, TEST_G21_MEDIUM_AI_MAKE_A_MOVE} -- Interface Procedure
 
 			end
 
-			move_to_make:= choose_move.twin
+			move_to_make:= choose_move
 			remove_card(move_to_make.card)
 			remove_position_and_update(move_to_make.position, FALSE)
-			result:=move_to_make.twin
+			result:=move_to_make
 
 		--ensure
 
@@ -88,7 +88,7 @@ feature{NONE} -- Procedures
 		do
 
 			actual_move.set_value(0)
-			new_value:= value_generation(actual_move.card.twin, actual_move.position.twin)
+			new_value:= value_generation(actual_move.card, actual_move.position.twin)
 			actual_move.set_value (new_value)
 
 		--ensure

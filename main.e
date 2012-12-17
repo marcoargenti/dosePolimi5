@@ -45,7 +45,7 @@ feature {NONE} -- main feature
 			board:=make_board
 			cards:=make_deck
 			cards_ai:=cards.twin
-			print(cards.count)
+			--print(cards.count)
 			rules_creation
 
 
@@ -70,7 +70,7 @@ feature {NONE} -- main feature
 					ai:=temp_easy_ai
 				end
 			end
-
+			print("%N%N%N%N")
 			number_player:=1 --set the initial player(human): 1 human, 2 ai
 
 			from
@@ -102,16 +102,23 @@ feature {NONE} -- main feature
 					print("%N%N")
 					temp_move_ai:= ai.make_a_move (temp_move.position) --temp_move contains a move of the first player or it is void
 					insert_card_into_board(number_player, temp_move_ai)
-					cards_ai.prune(temp_move.card)
+					--cards_ai.prune(temp_move.card)
+					cards_ai.search (temp_move_ai.card)
+					cards_ai.remove
+					cards_ai.start
 					number_player:=1
+					--print("%N%N%Nai cards%N%N%N")
+					--str:=print_cards(cards_ai)
+					--print_on_io_array(str)
+					--print("%N%N%N")
 				end
 				temp_x:=0
 				temp_y:=0
 			end
 		--	print_on_io_array(print_board)
 			str:=print_board
-			print("La partita è conclusa.%N%N")
-			print("Il vincitore è: ")
+			print("La partita e' conclusa.%N%N")
+			print("Il vincitore e': ")
 			print(winner)
 
 
@@ -127,26 +134,35 @@ feature {ANY} --support feature
 			cell.setplayernumber (number_player)
 			board[move.position.x,move.position.y] := cell
 
+			if check_use_of_rules(move)=FALSE then
+
+				make_move(move, number_player)
+
+			end
+		end
+
+	check_use_of_rules(move: G21_MOVE): BOOLEAN
+
+		do
+
+			result:= FALSE
+
 			if rules_on=TRUE then
 
 				if rules.plusrule.getison=TRUE and then rules.plusrule.ismakechange (move.position.x, move.position.y, move.card) then
 
-					print("verifico plus%N")
-
 					rules.plusrule.makechangeandupdate (move.position.x, move.position.y)
+					result:=TRUE
 
 				else if rules.samerule.getison=TRUE and then rules.samerule.ismakechange (move.position.x, move.position.y, move.card) then
 
-							print("verifico same%N")
-
 							rules.samerule.makechangeandupdate (move.position.x, move.position.y)
+							result:=TRUE
 
 					else if rules.samewallrule.getison=TRUE and then rules.samewallrule.ismakechange (move.position.x, move.position.y, move.card) then
 
-
-							print("verifico samewall%N")
-
-							rules.samewallrule.makechangeandupdate (move.position.x, move.position.y)
+								rules.samewallrule.makechangeandupdate (move.position.x, move.position.y)
+								result:=TRUE
 
 						end
 
@@ -154,21 +170,21 @@ feature {ANY} --support feature
 
 				end
 
-			else
-
-				make_move(move, number_player)
-
 			end
+
 		end
+
+
+
 
 	remove_card(number_player: INTEGER; index_card: INTEGER)
 		do
 			if(number_player=1) then
 					cards.prune (cards[index_card])
 					cards.start
-				else
-					cards_ai.prune (cards_ai[index_card])
-					cards_ai.start
+				--else
+				--	cards_ai.prune (cards_ai[index_card])
+				--	cards_ai.start
 				end
 		end
 
@@ -240,12 +256,17 @@ feature {ANY} --support feature
 		do
 			str:=print_board()
 		--	print_on_io_array(str)
-			if(number_player=1) then
-				str:=print_cards(cards)
-			else
+			if	rules_on=TRUE and then rules.openrule.getison=TRUE and then number_player=1 then
+				print("%N%NLe carte della AI sono: %N%N")
 				str:=print_cards(cards_ai)
+				print_on_io_array(str)
+				print("%N%N%N")
 			end
-			print_on_io_array(str)
+			if number_player=1 then
+				print("%N%NLe tue carte sono: %N%N")
+				str:=print_cards(cards)
+				print_on_io_array(str)
+			end
 		end
 
 	print_cards(cards_list: ARRAYED_LIST[G21_CARD]):ARRAY[STRING]
@@ -279,30 +300,35 @@ feature {ANY} --support feature
 		local
 			string: STRING
 			r: ARRAY[STRING]
-			tab: STRING
+			tab1: STRING
+			tab2: STRING
 			temp: STRING
 		do
-			create tab.make_from_string ("   ")
+			create tab1.make_from_string ("  ")
+			create tab2.make_from_string ("   ")
 			create r.make_filled ("|", 1, 3)
-			string:= tab.twin
+			string:= tab1.twin
 			temp:=card.top.to_hex_string
 			temp.remove_substring (1, 7)
 			string.append_string_general(temp)
-			string.append_string_general(tab)
+			string.append_string_general(tab1)
 			r.put (string, 1)
 			temp:=card.left.to_hex_string
 			temp.remove_substring (1, 7)
 			string:=(temp).twin
-			string.append_string_general(tab)
+			string.append_string_general(tab2)
 			temp:=card.right.to_hex_string
 			temp.remove_substring (1, 7)
 			string.append_string_general(temp)
+			temp:="  "
+			temp.append_string_general (card.cardName)
+			string.append_string_general(temp)
 			r.put (string, 2)
-			string:= tab.twin
+			string:= tab1.twin
 			temp:=card.bottom.to_hex_string
 			temp.remove_substring (1, 7)
 			string.append_string_general(temp)
-			string.append_string_general(tab)
+			string.append_string_general(tab1)
 			r.put (string, 3)
 			result:=r
 		end
@@ -317,15 +343,17 @@ feature {ANY} --support feature
 			err: INTEGER
 		do
 				create err
-				create r.make_filled ("|bbbbbb", 1, 3)
-				create tab.make_from_string("tt")
-				create space.make_from_string("s")
+				create r.make_filled ("|     ", 1, 3)
+				create tab.make_from_string("  ")
+				create space.make_from_string(" ")
 				if(cell.card/=void and then cell.card.bottom/=err) then
 					create string.make_empty
 					string:=tab.twin
 					string.append_string_general(cell.element.out)
 					string.append_string_general(space)
 
+					string:=""
+					string:=tab.twin
 					temp:=cell.card.top.to_hex_string
 					temp.remove_substring (1, 7)
 					string.append_string_general(temp)
@@ -343,6 +371,9 @@ feature {ANY} --support feature
 					string.append_string_general(space)
 					temp:=cell.card.right.to_hex_string
 					temp.remove_substring (1, 7)
+					string.append_string_general(temp)
+					temp:="  "
+					temp.append_string_general (cell.card.cardname)
 					string.append_string_general(temp)
 					r[2]:=string.twin
 
@@ -402,7 +433,7 @@ feature {ANY} --support feature
 						print(i)
 						print(",")
 						print(j)
-						print("%N")
+						print("%N%N")
 						print_on_io_array( print_cell(board.item (i, j)) )
 						print("%N")
 						from
@@ -435,43 +466,43 @@ feature {ANY} --support feature
 			create cards.make(0)
 
 			create card1.make
-			card1.setcardname ("Geezard")
-			card1.setbottom (1)
-			card1.setleft (3)
+			card1.setcardname ("Squall")
+			card1.setbottom (6)
+			card1.setleft (9)
 			card1.setright (4)
-			card1.settop (1)
+			card1.settop (10)
 			card1.setElement(' ')
 
 			create card2.make
-			card2.setcardname ("Funguar")
-			card2.setbottom (1)
-			card2.setleft (3)
-			card2.setright (1)
-			card2.settop (1)
+			card2.setcardname ("Seifer")
+			card2.setbottom (10)
+			card2.setleft (4)
+			card2.setright (9)
+			card2.settop (6)
 			card2.setElement(' ')
 
 			create card3.make
-			card3.setcardname ("Bite Bug")
-			card3.setbottom (7)
-			card3.setleft (1)
-			card3.setright (1)
-			card3.settop (1)
+			card3.setcardname ("Zell")
+			card3.setbottom (10)
+			card3.setleft (6)
+			card3.setright (5)
+			card3.settop (8)
 			card3.setElement(' ')
 
 			create card4.make
-			card4.setcardname ("Red Bat")
-			card4.setbottom (1)
-			card4.setleft (1)
-			card4.setright (1)
-			card4.settop (6)
+			card4.setcardname ("Quistis")
+			card4.setbottom (10)
+			card4.setleft (2)
+			card4.setright (6)
+			card4.settop (9)
 			card4.setElement(' ')
 
 			create card5.make
-			card5.setcardname ("Blobra")
-			card5.setbottom (1)
-			card5.setleft (1)
-			card5.setright (1)
-			card5.settop (1)
+			card5.setcardname ("Selphie")
+			card5.setbottom (6)
+			card5.setleft (4)
+			card5.setright (8)
+			card5.settop (10)
 			card5.setElement(' ')
 
 			cards.force(card1)
@@ -582,11 +613,11 @@ feature {ANY} --support feature
 		local
 			read: INTEGER
 		do
-			create rules.make
 			print ("%NVuoi usare le regole? 1 per si, 0 per no%N")
 			io.read_integer
 			read:=io.last_integer
 			if read=1 then
+				create rules.make
 				rules_on:= TRUE
 				print ("%NVuoi usare le regola OPEN? 1 per si, 0 per no%N")
 				io.read_integer
