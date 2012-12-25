@@ -67,7 +67,7 @@ feature{NONE} -- Creation
 
 					end
 
-					if game_rules.plusrule.getison then
+					if game_rules.samewallrule.getison then
 
 						ai_rules.activesamewall (fake.fake_board)
 
